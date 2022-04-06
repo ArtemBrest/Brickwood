@@ -1,0 +1,20 @@
+<svg>
+    <symbol id="active-radio" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="3" cy="3" r="3" fill="currentColor"/></symbol>
+    <symbol id="note-left" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M183.548 42.9333C184.001 43.429 184.769 43.4638 185.265 43.011C185.761 42.5583 185.796 41.7894 185.343 41.2937L183.548 42.9333ZM147.805 1.9999L148.702 1.1801L148.341 0.78434H147.805V1.9999ZM1.5 0.78434C0.828659 0.78434 0.284439 1.32857 0.284439 1.9999C0.284439 2.67124 0.828659 3.21547 1.5 3.21547V0.78434ZM185.343 41.2937L148.702 1.1801L146.907 2.81971L183.548 42.9333L185.343 41.2937ZM147.805 0.78434H1.5V3.21547H147.805V0.78434Z" fill="#FBB829"/><circle cx="186.527" cy="44.5448" r="2.60478" transform="rotate(180 186.527 44.5448)" stroke="#FBB829" stroke-width="1.73652"/></symbol>
+    <symbol id="note-right" viewBox="0 0 190 49" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.4522 42.9336C5.99943 43.4293 5.23057 43.464 4.73489 43.0113C4.23921 42.5585 4.20442 41.7896 4.65718 41.294L6.4522 42.9336ZM42.1953 2.00015L41.2978 1.18035L41.6593 0.784584H42.1953V2.00015ZM188 0.784584C188.671 0.784584 189.216 1.32881 189.216 2.00015C189.216 2.67149 188.671 3.21571 188 3.21571V0.784584ZM4.65718 41.294L41.2978 1.18035L43.0928 2.81995L6.4522 42.9336L4.65718 41.294ZM42.1953 0.784584H188V3.21571H42.1953V0.784584Z" fill="#FBB829"/><circle r="2.60478" transform="matrix(1 0 0 -1 3.47304 44.545)" stroke="#FBB829" stroke-width="1.73652"/></symbol>
+    <symbol id="plus-icon" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8.30859" width="1.38462" height="18" fill="currentColor"/><rect y="9.69238" width="1.38462" height="18" transform="rotate(-90 0 9.69238)" fill="currentColor"/></symbol>
+    <symbol id="polygon-icon" viewBox="0 0 19 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 11.5L0.25 0.674683V22.3253L19 11.5Z" fill="currentColor"/></symbol>
+    <symbol id="arrow-down" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L13 1" stroke="currentColor"/></symbol>
+    <symbol id="arrow-right-light" viewBox="0 0 35 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 11.0741H34M34 11.0741L21.8571 1M34 11.0741L21.8571 21.1481" stroke="currentColor"/></symbol>
+    <symbol id="arrow-right-bold" viewBox="0 0 39 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.410156 12.1688H36.001M36.001 12.1688L23.29 2M36.001 12.1688L23.29 22.3376" stroke="currentColor" stroke-width="3"/></symbol>
+    <symbol id="arrow-slider-right" viewBox="0 0 24 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.0976562 9.08379L22.348 9.14756M22.348 9.14756L11.9051 0.483856M22.348 9.14756L11.9051 17.8113" stroke="currentColor"/></symbol>
+    <symbol id="arrow-slider-left" viewBox="0 0 24 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.9023 9.08379L1.65201 9.14756M1.65201 9.14756L12.0949 0.483856M1.65201 9.14756L12.0949 17.8113" stroke="currentColor"/></symbol>
+    <symbol id="arrow-up-light" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.10905 23.8005L25.3928 0.701086M25.3928 0.701086L1.79274 2.89866M25.3928 0.701086L23.1952 24.3011" stroke="currentColor"/></symbol>
+    <symbol id="arrow-up-bold" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.51339 10.5134L9.7087 1.31808M9.7087 1.31808L0.596436 1.40356M9.7087 1.31808L9.78882 10.596" stroke="currentColor" stroke-width="1.16276"/></symbol>
+    <symbol id="active-check" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 8L6 13L13.5 0.5" stroke="currentColor"/></symbol>
+</svg>
+
+<!-- Add to HTML Code -->
+<!--<svg class="svg-icon">
+    <use xlink:href="<?= get_template_directory_uri(); ?>/img/sprites.svg?ver=<?= date("h:i:s");?>#present"></use>
+</svg>-->
