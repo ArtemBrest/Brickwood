@@ -93,12 +93,39 @@ button:hover {
     color: @text-color-white;
   }
 }
+.btn-main-secondary{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  background: @text-color-black;
+  border: 1px solid @text-color-black;
+  color: @text-color-white;
+  transition: all 0.2s;
+  padding: 15px 20px;
+  &:hover{
+    background: @main-color;
+    border: 1px solid @main-color;
+    color: @text-color-black;
+  }
+}
 
 .h2{
   font-weight: 400;
   font-size: 26px;
   line-height: 113%;
   color: #000000;
+}
+.df-center-sb{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.m150{
+  margin: 150px 0;
 }
 
 .fade {
@@ -123,7 +150,7 @@ button:hover {
   overflow: hidden;
   text-align: center;
   transform: translateX(-50%);
-  display: block;
+  display: none;
   padding: 135px 110px;
   min-height: 380px;
   border: 1px solid #D7D7D7;
@@ -151,7 +178,7 @@ button:hover {
   overflow: hidden;
   text-align: center;
   transform: translateX(-50%);
-  display: none;
+  display: block;
   &__close {
     position: absolute;
     top: 15px;
@@ -207,6 +234,7 @@ button:hover {
   }
 
 }
+
 .up {
   display: flex;
   align-items: center;
