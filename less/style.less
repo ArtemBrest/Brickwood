@@ -114,11 +114,46 @@ button:hover {
   }
 }
 
+.h1-banner{
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 110%;
+  text-transform: uppercase;
+  color: #F8F8F8;
+  &_smal{
+    font-size: 42px;
+    line-height: 120%;
+  }
+}
+.h1-block{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 115%;
+  text-transform: uppercase;
+  color: @text-color-black;
+  &_column{
+    flex-flow: column-reverse;
+    align-items: flex-start;
+  }
+  &__line{
+    display: block;
+    width: 85px;
+    height: 3px;
+    background: @text-color-black;
+  }
+}
 .h2{
   font-weight: 400;
   font-size: 26px;
   line-height: 113%;
   color: #000000;
+}
+.df-center{
+  display: flex;
+  align-items: center;
 }
 .df-center-sb{
   display: flex;
@@ -129,8 +164,9 @@ button:hover {
   margin: 150px 0;
 }
 
-.fade {
-  display: block;
+.fade,
+.menu-overlay{
+  display: none;
   position: fixed;
   z-index: 99;
   left: 0;
@@ -179,7 +215,7 @@ button:hover {
   overflow: hidden;
   text-align: center;
   transform: translateX(-50%);
-  display: block;
+  display: none;
   &__close {
     position: absolute;
     top: 15px;
@@ -348,6 +384,72 @@ button:hover {
   }
 }
 
+
+.header{
+  position: relative;
+  z-index: 10;
+  background: #F9F9F9;
+  &__row{
+    padding: 10px 0;
+  }
+  &__phone{
+    gap: 5px;
+    margin: 0 20px 0 0;
+    &-link{
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #303030;
+      &:hover{
+        color: @main-color;
+      }
+    }
+  }
+}
+.menu{
+  &__item{
+    position: relative;
+    padding: 30px 13px;
+    &:hover .menu__link{
+      color: @main-color;
+    }
+  }
+  &__link{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: @text-color-black;
+  }
+  &__sub{
+    position: absolute;
+    top: 70px;
+    right: -105px;
+    width: 300px;
+    background: #FFFFFF;
+    border: 1px solid #F9F9F9;
+    box-shadow: inset 0px 1px 4px rgba(206, 206, 206, 0.25);
+    padding: 15px;
+    display: flex;
+    flex-flow: column;
+    &-item{
+      padding: 5px 0;
+      transition: all 0.2s;
+      &:hover{
+        padding: 5px 0 5px 15px;
+      }
+      &:hover .menu__sub-link{
+        color: @main-color;
+      }
+    }
+    &-link{
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #555555;
+    }
+  }
+}
+
 /* TABS FORM */
 .form-tabs{
   position: relative;
@@ -373,7 +475,7 @@ button:hover {
     bottom: 0px;
     left: 0px;
     right: 0px;
-    
+
     img{
       width: 100%;
       display: block;
@@ -394,7 +496,7 @@ button:hover {
     background: #FFFFFF;
     border: 1px solid #D7D7D7;
     box-sizing: border-box;
-    
+
     &:not(:last-child){
       border-right:none;
     }
@@ -466,11 +568,6 @@ button:hover {
     margin-top: 20px;
   }
 }
-
-
-
-
-
 
 @media (max-width: 1330px) {
   .container {

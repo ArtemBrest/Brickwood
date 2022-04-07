@@ -12,54 +12,49 @@
 </head>
 <body>
 <div class="menu-overlay"></div>
-<header></header>
-<main>
-    <div class="form-tabs">
-        <div class="container">
-            <div class="form-tabs__top form-tabs-top">
-                <div class="form-tabs-top__item form-tabs-top__item--active">Записаться на экскурсию</div>
-                <div class="form-tabs-top__item">Индивидуальное проектирование</div>
-                <div class="form-tabs-top__item">Получить консультацию</div>
-                <div class="form-tabs-top__item">Рассчитать стоимость</div>
+<header class="header ">
+    <div class="container">
+        <div class="header__row df-center-sb">
+            <div class="header__left df-center">
+                <a href="#" class="header__logo">
+                    <img src="img/logo.png" alt="" class="header__logo-image">
+                </a>
+                <div class="header__menu menu">
+                    <ul class="menu__list df-center">
+                        <li class="menu__item"><a href="#" class="menu__link">Что мы строим</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Проекты</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Калькулятор</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Акции</a></li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Клиентам</a>
+                            <ul class="menu__sub">
+                                <li class="menu__sub-item"><a href="#" class="menu__sub-link">О компании</a></li>
+                                <li class="menu__sub-item"><a href="#" class="menu__sub-link">Портфолио</a></li>
+                                <li class="menu__sub-item"><a href="#" class="menu__sub-link">Дополнительные услуги</a></li>
+                                <li class="menu__sub-item"><a href="#" class="menu__sub-link">Индивидуальное проектирование</a></li>
+                                <li class="menu__sub-item"><a href="#" class="menu__sub-link">Технология строительства</a></li>
+                                <li class="menu__sub-item"><a href="#" class="menu__sub-link">Экскурсия</a></li>
+                                <li class="menu__sub-item"><a href="#" class="menu__sub-link">Кредитование</a></li>
+                                <li class="menu__sub-item"><a href="#" class="menu__sub-link">Выберите дизайн своего дома</a></li>
+                                <li class="menu__sub-item"><a href="#" class="menu__sub-link">Новости</a></li>
+                                <li class="menu__sub-item"><a href="#" class="menu__sub-link">Контакты</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="form-tabs__bottom form-tabs-bottom">
-                <div class="form-tabs-bottom__left">
-                    <div class="form-tabs-bottom__title">Запишитесь на экскурсию, чтобы увидеть все своими глазами</div>
-                    <div class="form-tabs-bottom__hr"></div>
-                    <form action="">
-                        <div class="form-tabs-bottom__feedback form-feedback">
-                            <div class="form-feedback__wrapper">
-                                <input type="text" placeholder="Имя" class="form-feedback__input">
-                            </div>
-                            <div class="form-feedback__wrapper">
-                                <input type="text" placeholder="Телефон" class="form-feedback__input">
-                            </div>
-                            <div class="form-feedback__wrapper">
-                                <button class="form-feedback__button btn-main">Оставить заявку</button>
-                            </div>
-                        </div>
-                    </form>
+            <div class="header__right df-center">
+                <div class="header__phone df-center">
+                    <img src="img/svg/phone.svg" alt="" class="header__phone-icon">
+                    <a href="tel:+78432452945" class="header__phone-link">+7 (843) 245-29-45</a>
                 </div>
-                <div class="form-tabs-bottom__right tabs-bottom-right">
-                    <div class="tabs-bottom-right__title">Также вы можете<br>написать нам напрямую</div>
-                    <div class="tabs-bottom-right__socials form-socials">
-                        <a href="#" class="form-socials__item">
-                            VK
-                        </a>
-                        <a href="#" class="form-socials__item">
-                            Wp
-                        </a>
-                    </div>
-                </div>
+                <button class="btn-main popup-btn">Заказать звонок</button>
             </div>
         </div>
-        <span class="form-tabs__bg">
-            <img src="img/main/bg-tabs-form-bottom.png">
-        </span>
     </div>
-</main>
-<footer></footer>
-<!---
+</header>
+<main></main>
+<footer class="footer"></footer>
 <div class="fade"></div>
 <div class="modal-thanks" id="ModalThanks">
     <span class="h2 modal-thanks__title">Спасибо! Ваша заявка отправлена.</span>
@@ -84,7 +79,6 @@
         <path d="M4 24L23.7826 7L43 24" stroke="white" stroke-width="7"></path>
     </svg>
 </button>
--->
 <script src="lightGallery-master/dist/lightgallery.min.js"></script>
 <script src="js/swiper-bundle.min.js"></script>
 <script src="js/script.js"></script>
