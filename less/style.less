@@ -47,7 +47,7 @@ button:hover {
 }
 
 .container {
-  width: 1330px;
+  width: 1235px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -347,6 +347,56 @@ button:hover {
   }
 }
 
+/* TABS FORM */
+.form-tabs{
+  background: url(../img/main/bg-form.jpg) no-repeat;
+  background-size: cover;
+  min-height: 363px;
+  width: 100%;
+
+  &__top{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.form-tabs-top{
+  &__item{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #303030;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border: 1px solid #D7D7D7;
+    box-sizing: border-box;
+    
+    &:not(:last-child){
+      border-right:none;
+    }
+
+    &:hover,&--active{
+      color:#ffffff;
+      background: #303030;
+      border: 1px solid #303030;
+      cursor: pointer;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 1330px) {
   .container {
     width: 1170px;
@@ -383,3 +433,4 @@ button:hover {
     }
   }
 }
+
