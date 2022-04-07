@@ -2,6 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  transition: all 0.5s;
 }
 body {
   margin: 0 auto;
@@ -342,6 +343,7 @@ button:hover {
 }
 /* TABS FORM */
 .form-tabs {
+  position: relative;
   background: url(../img/main/bg-form.jpg) no-repeat;
   background-size: cover;
   min-height: 363px;
@@ -350,6 +352,22 @@ button:hover {
 .form-tabs__top {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+}
+.form-tabs__bottom {
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+.form-tabs__bg {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+.form-tabs__bg img {
+  width: 100%;
+  display: block;
 }
 .form-tabs-top__item {
   font-weight: 500;
@@ -373,6 +391,50 @@ button:hover {
   background: #303030;
   border: 1px solid #303030;
   cursor: pointer;
+}
+.form-tabs-bottom__title {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 113%;
+  color: #FFFFFF;
+  max-width: 440px;
+  width: 100%;
+}
+.form-tabs-bottom__hr {
+  margin: 20px 0px 40px;
+  width: 85px;
+  height: 3px;
+  background: #ffffff;
+}
+.form-tabs-bottom__feedback {
+  display: flex;
+  box-sizing: border-box;
+}
+.form-feedback__input {
+  width: 205px;
+  height: 55px;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 0px 17px;
+  line-height: 19px;
+  border: 1px solid #F0F0F0;
+}
+.form-feedback__input::placeholder {
+  color: #868686;
+}
+.form-feedback__button {
+  width: 171px;
+  height: 55px;
+  padding: 0px;
+}
+.tabs-bottom-right__title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+.tabs-bottom-right__socials {
+  margin-top: 20px;
 }
 @media (max-width: 1330px) {
   .container {
