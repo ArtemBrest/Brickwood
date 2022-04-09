@@ -1,5 +1,6 @@
 *, *::before, *::after {
   box-sizing: border-box;
+  transition: all 0.5s;
 }
 
 body {
@@ -386,6 +387,7 @@ button:hover {
     opacity: 0.01;
   }
 }
+
 
 .header{
   position: relative;
@@ -932,6 +934,125 @@ button:hover {
   }
 }
 
+/* TABS FORM */
+.form-tabs{
+  position: relative;
+  background: url(../img/main/bg-form.jpg) no-repeat;
+  background-size: cover;
+  min-height: 363px;
+  width: 100%;
+
+  &__top{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__bottom{
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+  }
+
+  &__bg{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+
+    img{
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+.form-tabs-top{
+  &__item{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #303030;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border: 1px solid #D7D7D7;
+    box-sizing: border-box;
+
+    &:not(:last-child){
+      border-right:none;
+    }
+
+    &:hover,&--active{
+      color:#ffffff;
+      background: #303030;
+      border: 1px solid #303030;
+      cursor: pointer;
+    }
+  }
+}
+
+.form-tabs-bottom{
+
+  &__title{
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 113%;
+    color: #FFFFFF;
+    max-width: 440px;
+    width: 100%;
+  }
+
+  &__hr{
+    margin:20px 0px 40px;
+    width: 85px;
+    height: 3px;
+    background: #ffffff;
+  }
+
+  &__feedback{
+    display: flex;
+    box-sizing: border-box;
+  }
+}
+
+.form-feedback{
+  &__input{
+    width: 205px;
+    height: 55px;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 0px 17px;
+    line-height: 19px;
+    border: 1px solid #F0F0F0;
+
+    &::placeholder{
+      color: #868686;
+    }
+  }
+
+  &__button{
+    width: 171px;
+    height: 55px;
+    padding: 0px;
+  }
+}
+
+.tabs-bottom-right{
+  &__title{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+  }
+
+  &__socials{
+    margin-top: 20px;
+  }
+}
+
 @media (max-width: 1330px) {
   .container {
     width: 1170px;
@@ -968,3 +1089,4 @@ button:hover {
     }
   }
 }
+
