@@ -183,7 +183,6 @@ window.addEventListener("load", function() {
         var swiper = new Swiper(ProjectSwiper, {
             slidesPerView: 1,
             spaceBetween: 0,
-            loop: true,
             navigation: {
                 nextEl: ".project__btn-next",
                 prevEl: ".project__btn-prev",
@@ -194,6 +193,51 @@ window.addEventListener("load", function() {
                     spaceBetween: 30,
                 }
             },
+        });
+    }
+    let PortfolioSwiper = document.querySelector(".portfolio__swiper");
+    if(PortfolioSwiper !== null){
+        var swiper = new Swiper(PortfolioSwiper, {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            centeredSlides: true,
+            navigation: {
+                nextEl: ".portfolio__btn-next",
+                prevEl: ".portfolio__btn-prev",
+            },
+            breakpoints:{
+                1235:{
+                    slidesPerView: "auto",
+                    spaceBetween: 30,
+                }
+            },
+        });
+    }
+    let PortfolioVideo = document.querySelectorAll(".portfolio__video");
+    if(PortfolioVideo !== null) {
+        for (let i = 0; i < PortfolioVideo.length; i++){
+            lightGallery(PortfolioVideo[i], {
+                selector: '.card__play',
+                plugins: [lgVideo],
+            });
+        }
+    }
+    let HowDoWorkSwiper = document.querySelector(".how-do-work__swiper");
+    if(HowDoWorkSwiper !== null){
+        var swiper = new Swiper(HowDoWorkSwiper, {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            navigation: {
+                nextEl: ".how-do-work__btn-next",
+                prevEl: ".how-do-work__btn-prev",
+            },
+        });
+    }
+    let HowDoWorkVideo = document.getElementById("how-do-work__video");
+    if(HowDoWorkVideo !== null) {
+        lightGallery(HowDoWorkVideo, {
+            selector: '.how-do-work__play',
+            plugins: [lgVideo],
         });
     }
     function initAcc(elem, option) {
