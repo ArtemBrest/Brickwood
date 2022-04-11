@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="lightGallery-master/dist/css/lg-video.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="js/jquery-ui.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
 </head>
 <body>
 <div class="menu-overlay"></div>
@@ -100,6 +104,52 @@
     </div>
 </header>
 <main>
+    <section class="banner">
+        <div class="banner__wrapper">
+            <div class="banner__image">
+                <div class="banner__image--left">
+                    <span><img src="img/main-banner-bg.png"></span>
+                </div>
+                <div class="banner__image--right"><img src="img/main/banner-main.jpg"></div>
+            </div>
+            <div class="banner__information">
+                <div class="container">
+                    <div class="banner__inner">
+                        <div class="banner__content banner-content">
+                            <div class="banner-content__title">Строительство домов и бань под ключ </div>
+                            <div class="banner-content__text">Мы нашли для вас подходящий дом</div>
+                            <div class="banner-content__form banner-form">
+                                <input type="text" placeholder="Введите текст запрос" class="banner-form__input">
+                                <button class="banner-form__btn">
+                                    <svg width="35" height="22" viewBox="0 0 35 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 11.0741H34M34 11.0741L21.8571 1M34 11.0741L21.8571 21.1481" stroke="#FBB829"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="banner__filter banner-filter">
+
+                            <div class="banner-filter__wrapper">
+                                <div class="banner-filter--left">
+                                    <div id="slider-range" class="banner-filter__range"></div>
+                                    <div class="banner-filter__labels">
+                                        <div class="banner-filter__min"></div>
+                                        <div class="banner-filter__max"></div>
+                                    </div>
+                                </div>
+                                <div class="banner-filter--right">
+                                    <span>Найдено: 5 проектов</span>
+                                    <svg width="39" height="24" viewBox="0 0 39 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.410156 12.1688H36.001M36.001 12.1688L23.29 2M36.001 12.1688L23.29 22.3376" stroke="#FBB829" stroke-width="3"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="building m150">
         <div class="container">
             <div class="h1-block building__title">
@@ -367,6 +417,40 @@
             <a href="#" class="portfolio__link btn-main-secondary">Смотреть все кейсы</a>
         </div>
     </section>
+    <section class="aboute m150">
+        <div class="aboute__top aboute-top">
+            <div class="container">
+                <div class="h1-block how-do-work__title">
+                    <span class="h1-block__line"></span>
+                    О нас
+                </div>
+                <div class="aboute-top__text">
+                    Наша компания предлагает строительство дачных домов. <br>Доверив возведение дачного дома нам, вы будете приятно удивлены быстрыми сроками работ, высоким качеством.
+                    Мы применяем только проверенные, надежные материалы, которые даже спустя большой промежуток времени при постоянной эксплуатации сохранят привлекательный внешний вид и начальные параметры. Дачные дома под ключ станут не просто местом для отдыха, а настоящим уголком уюта, где каждый член семьи будет приятно проводить время. Можно участвовать в процессе проектирования, строительства.
+                </div>
+                <span class="aboute-top__image"><img src="img/main/about.jpg"></span>
+            </div>
+        </div>
+        <div class="aboute__bottom aboute-bottom">
+            <div class="container">
+                <div class="aboute-bottom__circle aboute-bottom-circle">
+                    <div class="aboute-bottom-circle__item">
+                        <div class="aboute-bottom-circle__title">14 лет</div>
+                        <div class="aboute-bottom-circle__text">на рынке</div>
+                    </div>
+                    <div class="aboute-bottom-circle__item">
+                        <div class="aboute-bottom-circle__title">123</div>
+                        <div class="aboute-bottom-circle__text">чего-то ещё</div>
+                    </div>
+                    <div class="aboute-bottom-circle__item">
+                        <div class="aboute-bottom-circle__title">1000</div>
+                        <div class="aboute-bottom-circle__text">довольных клиентов</div>
+                    </div>
+                </div>
+                <a href="#" class="btn-main-secondary aboute-bottom__btn">Подробнее</a>
+            </div>
+        </div>
+    </section>
     <section class="how-do-work m150">
         <div class="container">
             <div class="how-do-work__wrapper">
@@ -504,7 +588,7 @@
         <div class="container">
             <div class="services__grid services-grid">
                 <div class="services-grid__item noBlockService services-grid-item">
-                    <div class="services-grid-item__bigtitle">А ещё мы делаем инженерные коммуникации</div>
+                    <div class="h1-block">А ещё мы делаем инженерные коммуникации</div>
                     <span class="services-grid-item__hr"></span>
                 </div>
                 <div class="services-grid__item services-grid-item">
@@ -574,7 +658,7 @@
         <div class="container">
             <div class="individual-block__wrapper individual-wrapper">
                 <div class="individual-wrapper__left">
-                    <div class="individual-wrapper__title">
+                    <div class="h1-block">
                         Индивидуальное проектирование
                     </div>
                     <div class="individual-wrapper__hr"></div>
@@ -630,7 +714,7 @@
         <div class="container">
             <div class="calculate__wrapper">
                 <div class="calculate__content calculate-content">
-                    <div class="calculate-content__title">Дополнительные<br>финансовые инструменты*</div>
+                    <div class="h1-block">Дополнительные<br>финансовые инструменты*</div>
                     <div class="calculate-content__hr"></div>
                     <div class="calculate-content__text">Реализуйте свою мечту с помощью наших банков-партнеров.</div>
 
@@ -914,5 +998,23 @@
 <script src="js/swiper-bundle.min.js"></script>
 <script src="js/cocoen.js"></script>
 <script src="js/script.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $( "#slider-range" ).slider({
+            range: true,
+            min: 0,
+            max: 6500000,
+            values: [ 600000, 6000000 ],
+            slide: function( event, ui ) {
+                $('.banner-filter__min').text(ui.values[ 0 ] + ' руб.');
+                $('.banner-filter__max').text(ui.values[ 1 ] + ' руб.');
+            }
+        });
+
+        $('.banner-filter__min').text($( "#slider-range" ).slider( "values", 0 ) + ' руб.');
+        $('.banner-filter__max').text($( "#slider-range" ).slider( "values", 1 ) + ' руб.');
+    });
+</script>
 </body>
 </html>
