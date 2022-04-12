@@ -167,7 +167,7 @@ button:hover {
 .m150{
   margin: 150px 0;
   &_first{
-    margin: 60px 0 150px;
+    margin: 40px 0 150px;
   }
 }
 
@@ -414,23 +414,53 @@ button:hover {
     text-transform: uppercase;
     color: @text-color-black;
   }
-  & h2{
+  & > h2{
     font-weight: 400;
     font-size: 26px;
     line-height: 113%;
     color: #000000;
+    margin: 0 0 15px;
   }
-  & h3{
+  & > h3{
     font-weight: 400;
     font-size: 22px;
     line-height: 120%;
     color: #000000;
+    margin: 0 0 15px;
   }
   & h4{
     font-weight: 500;
     font-size: 20px;
     line-height: 120%;
     color: #000000;
+    margin: 0 0 15px;
+  }
+  & > ul{
+    margin: 15px 0;
+    padding: 0;
+  }
+  & > ul > li{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: inherit;
+    margin: 0 0 5px;
+    &:last-child{
+      margin: 0;
+    }
+    &:before{
+      content: "";
+      flex-shrink: 0;
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: @text-color-black;
+      margin: 10px 0 0;
+    }
   }
 }
 /* SECTION HEADER */
@@ -1328,6 +1358,7 @@ button:hover {
 }
 /* PAGE CONTACT */
 .contact{
+  margin: 60px 0 150px;
   &__title{
     margin: 0 0 30px;
   }
@@ -1520,14 +1551,42 @@ button:hover {
     display: grid;
     grid-gap: 27px;
     grid-template-columns: repeat(3, 1fr);
+    position: relative;
   }
+
   &-grid-item{
     border: 1px solid #D7D7D7;
+    background: #FFFFFF;
     box-sizing: border-box;
     height: 232px;
     padding: 20px;
     position: relative;
     transition: all 0.2s;
+    &--active{
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 800px;
+      min-height: 750px;
+      height: max-content;
+      z-index: 22;
+      padding: 20px 20px 90px;
+      .services-grid-item{
+        &__icon{
+          display: block;
+        }
+        &__text{
+          max-width: 100%;
+          .cms-description-text{
+            margin-top: 15px;
+            display: block;
+          }
+        }
+        &__arrow{
+          display: none;
+        }
+      }
+    }
     &:hover{
       border: 1px solid @text-color-black;
     }
@@ -1545,7 +1604,16 @@ button:hover {
       text-transform: uppercase;
       color: @text-color-black;
     }
-
+    &__icon{
+      transform: rotate(45deg);
+      color: @main-color;
+      transition: all 0.3s;
+      display: none;
+      cursor: pointer;
+      &:hover{
+        color: @text-color-black;
+      }
+    }
     &.noBlockService{
       border:none;
     }
@@ -1557,6 +1625,9 @@ button:hover {
       color: #555555;
       max-width: 255px;
       width: 100%;
+      & .cms-description-text{
+        display: none;
+      }
     }
     &__hr{
       width: 85px;
@@ -1698,6 +1769,17 @@ button:hover {
     padding: 50px 0px;
     background: #F9F9F9;
     border: 1px solid #F0F0F0;
+    height: max-content;
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      border: 20px solid transparent;
+      border-right: 20px solid @main-color;
+      border-bottom: 20px solid @main-color;
+    }
   }
   &-form{
     &__title{
@@ -1793,7 +1875,8 @@ button:hover {
         border: 1px solid #D7D7D7;
       }
 
-      &:hover{
+      &:hover,
+      &--active{
         color: #fff;
         background: @text-color-black;
         border: 1px solid @text-color-black;
@@ -1814,6 +1897,22 @@ button:hover {
       &:hover{
         border-bottom:1px solid #FBB829;
         color: @text-color-black;
+      }
+    }
+  }
+  &-content{
+    &__item{
+      display: none;
+      &--active{
+        display: block;
+      }
+    }
+    &-info{
+      &__item{
+        display: none;
+        &--active{
+          display: block;
+        }
       }
     }
   }
@@ -1880,10 +1979,6 @@ button:hover {
           fill: #FBB829;
         }
       }
-
-      & + .info-revert__caption{
-        display: block;
-      }
     }
   }
   &-caption{
@@ -1909,7 +2004,6 @@ button:hover {
 }
 /* NEWS PAGE */
 .news{
-  margin: 40px 0 150px;
   &__title{
     margin: 0 0 30px;
   }
@@ -2259,6 +2353,71 @@ button:hover {
     }
   }
 }
+/* SECTION ABOUT VIDEO AND PHOTO */
+.about-video{
+  &__title{
+    margin: 0 0 30px;
+  }
+  &__wrapper{
+    position: relative;
+  }
+  &__swiper{
+    display: block;
+    max-width: 1060px;
+    margin: 0 auto;
+  }
+  &__item{
+    position: relative;
+    &-play{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 80px;
+      height: 80px;
+      background: rgba(255,255,255,.6);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: @main-color;
+    }
+  }
+  &__btn{
+    &-next,
+    &-prev{
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      margin-top: 0;
+      z-index: 10;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: @text-color-black;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      border: 0.86px solid @text-color-black;
+      &:after{
+        content: "";
+        display: none;
+      }
+      &.swiper-button-disabled{
+        opacity: .5;
+      }
+    }
+    &-prev{
+      transform: rotate(180deg);
+    }
+    &-next{
+      left: initial;
+      right: 0;
+    }
+  }
+}
 /* SECTION ABOUT ADVANTAGES */
 .about-advantages{
   &__title{
@@ -2537,6 +2696,28 @@ button:hover {
     max-width: 445px;
     width: 100%;
     margin-top:40px;
+  }
+}
+/* BREADCRUMB */
+.breadcrumb{
+  flex-flow: row wrap;
+  gap: 10px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  color: @main-color;
+  padding: 0 0 15px;
+  a,
+  &__last {
+    font-size: 12px;
+    line-height: 100%;
+    color: @text-color-black;
+    padding: 0 5px;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+  }
+  a:hover{
+    color: @main-color;
   }
 }
 
