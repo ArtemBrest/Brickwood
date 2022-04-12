@@ -298,6 +298,28 @@ window.addEventListener("load", function() {
             },
         });
     }
+    let TeamSwiper = document.querySelector(".team__swiper");
+    if(TeamSwiper !== null){
+        var swiper = new Swiper(TeamSwiper, {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            centeredSlides: true,
+            navigation: {
+                nextEl: ".team__btn-next",
+                prevEl: ".team__btn-prev",
+            },
+            breakpoints:{
+                1235:{
+                    slidesPerView: "auto",
+                    spaceBetween: 30,
+                }
+            },
+        });
+        lightGallery(TeamSwiper, {
+            selector: '.team__card',
+            plugins: [lgVideo],
+        });
+    }
     let LookSlider = document.getElementById("look__slider");
     if(LookSlider !== null){
         Cocoen.create(LookSlider);
