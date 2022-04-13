@@ -447,7 +447,7 @@ button:hover {
     font-size: 18px;
     line-height: 140%;
     color: inherit;
-    margin: 0 0 5px;
+    margin: 0 0 10px;
     &:last-child{
       margin: 0;
     }
@@ -949,11 +949,23 @@ button:hover {
     }
   }
   .card{
-    &__img{
+    &__wrapper{
+      position: relative;
+      overflow: hidden;
       height: 390px;
       width: 790px;
-      object-fit: cover;
       margin: 0 0 20px;
+      transition: all 0.2s;
+      &:hover .card__img{
+        transform: scale(1.2);
+      }
+    }
+    &__img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 1s;
     }
     &__row{
       display: flex;
@@ -2120,7 +2132,7 @@ button:hover {
     border: 1px solid @text-color-black;
     background: transparent;
     &:hover{
-      border: 1px solid @main-color;
+      opacity: .5;
     }
   }
 }
@@ -2175,7 +2187,7 @@ button:hover {
       padding: 10px;
       border-radius: 3px;
       &:hover{
-        border: 1px solid @main-color;
+        opacity: 0.5;
       }
     }
   }
@@ -2281,6 +2293,10 @@ button:hover {
 }
 /* SECTION ABOUTE */
 .aboute{
+  position: relative;
+  &_excursion{
+    margin: 115px 0 250px;
+  }
   &_other{
     margin: 0 0 280px;
     .aboute-top{
@@ -2293,6 +2309,13 @@ button:hover {
   &__top{
     background: #F9F9F9;
     padding: 40px 45px;
+    &_excursion{
+      .aboute-top__image{
+        position: absolute;
+        right: 0;
+        top: -150px;
+      }
+    }
   }
   &-top{
     &__text{
@@ -2310,6 +2333,21 @@ button:hover {
       position: absolute;
       right: 0;
       top: -80px;
+    }
+    &__description{
+      ul{
+        & > li {
+          align-items: center;
+          &:before{
+            content: "";
+            width: 16px;
+            height: 2px;
+            border-radius: 0;
+            background: @main-color;
+            margin: 0;
+          }
+        }
+      }
     }
   }
   &-bottom{
@@ -2551,6 +2589,24 @@ button:hover {
     }
   }
 }
+/* SECTION EXCURSION BANNER */
+.excursion-banner{
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  &__info{
+    padding: 200px 0;
+    min-height: 780px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 100%;
+    margin-top: auto;
+  }
+  &__title{
+    margin: 0 0 75px;
+  }
+}
 /* SECTION FOOTER */
 .footer{
   background: #F9F9F9;
@@ -2662,10 +2718,15 @@ button:hover {
       grid-gap: 27px;
     }
     &__item{
+      display: block;
       background: #F9F9F9;
       border: 1px solid #868686;
-      box-sizing: border-box;
       padding: 25px;
+      transition: all 0.2s;
+      cursor: pointer;
+      &:hover{
+        opacity: .5;
+      }
     }
     &-title{
       font-weight: 500;

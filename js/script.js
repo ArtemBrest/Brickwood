@@ -423,4 +423,30 @@ window.addEventListener("load", function() {
             });
         }
     }
+
+
+
+    var skroll = new Skroll()
+        .addAnimation("custom",{
+            start:function(el){
+                el.style["opacity"] = 0;
+            },
+            end:function(el){
+                el.style["opacity"] = 1;
+            }
+        }).add(".anim1",{
+            animation: "custom",
+            duration: 1000,
+            delay: 300
+        })
+        .add(".anim5",{
+            animation:"slideInLeft",
+            delay: 300,
+            duration: 1000,
+        })
+        .add(".anim6",{
+            animation:"slideInRight",
+            delay: 300,
+            duration: 1000,
+        }).init();
 })
