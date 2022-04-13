@@ -2465,6 +2465,22 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 30px;
+    &_technology{
+      .card{
+        background: #F9F9F9;
+        padding: 20px 20px 60px;
+        position: relative;
+        &:after {
+          content: '';
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          border: 20px solid transparent;
+          border-right: 20px solid #fbb829;
+          border-bottom: 20px solid #fbb829;
+        }
+      }
+    }
     .card{
       &__top{
         gap: 10px;
@@ -2779,6 +2795,113 @@ button:hover {
   }
   a:hover{
     color: @main-color;
+  }
+}
+/* SECTION BANNER TECHNOLOGY */
+.technology-banner{
+  min-height: 800px;
+  padding: 100px 180px 160px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  &__wrapper{
+    position: relative;
+    height: 100%;
+  }
+  &__block{
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0 0 0 15px;
+    border-left: 2px solid @main-color;
+    &-text{
+      display: block;
+      max-width: 240px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: #F9F9F9;
+    }
+  }
+  &__item{
+    position: absolute;
+    color: #F9F9F9;
+    display: flex;
+    flex-flow: column;
+    width: 225px;
+    &_right{
+      text-align: right;
+      align-items: flex-end;
+    }
+    &_left{
+      text-align: left;
+      align-items: flex-start;
+    }
+    &:nth-child(1){
+      right: 35%;
+      top: 0;
+    }
+    &:nth-child(2){
+      left: 35%;
+      top: 175px;
+    }
+    &:nth-child(3){
+      left: 35px;
+      top: 235px;
+    }
+    &:nth-child(4){
+      left: 21%;
+      top: 320px;
+    }
+    &:nth-child(5){
+      right: 35%;
+      top: 360px;
+    }
+    &:nth-child(6){
+      right: 0;
+      top: 360px;
+    }
+    &:nth-child(7){
+      left: 20px;
+      top: 430px;
+    }
+  }
+  &__title{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: inherit;
+  }
+  &__text{
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: inherit;
+    margin: -50px 0 0;
+    max-width: 198px;
+  }
+}
+/* SECTION FEATURE */
+.feature{
+  &__wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    align-items: center;
+  }
+  &__title{
+    margin: 0 0 30px;
+  }
+  &__banner{
+    width: 100%;
+    height: 100%;
+    &-img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }
 
