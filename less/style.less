@@ -3,6 +3,10 @@
   transition: all 0.5s;
 }
 
+*.noMargin{
+  margin: 0px !important;
+}
+
 body {
   margin: 0 auto;
   font-family: "Rubik", sans-serif;
@@ -169,6 +173,9 @@ button:hover {
   &_first{
     margin: 40px 0 150px;
   }
+}
+.m30{
+  margin: 30px 0;
 }
 
 .fade,
@@ -687,6 +694,30 @@ button:hover {
     }
   }
 }
+
+.banner{
+  .banner-content__title--middle{
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #F9F9F9;
+  }
+
+  .banner-content__text--middle{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: #F9F9F9;
+    max-width: 470px;
+    width: 100%;
+  }
+
+  &__btnlink{
+    margin-top: 60px;
+  }
+}
+
 /* SECTION BUILDING */
 .building{
   &.m150{
@@ -2256,12 +2287,20 @@ button:hover {
     &__main{
       max-width: 900px;
       width: 100%;
+
+      &.allWidth{
+        max-width: 100%;
+      }
     }
 
     &__projects{
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 25px;
+
+      &--three{
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
   }
 }
@@ -2428,6 +2467,56 @@ button:hover {
     max-width: fit-content;
   }
 }
+
+.filter-section{
+  margin-top: 70px;
+
+  .container{
+    position: relative;
+  }
+}
+
+.filter-horizontal{
+
+  .refresh-filter{
+    margin-top: 25px;
+  }
+
+  &__column{
+    position: absolute;
+    right: 15px;
+    top: -10px;
+  }
+
+  &__border{
+    border-top:1px solid #D7D7D7;
+    border-bottom:1px solid #D7D7D7;
+    padding:15px 0px;
+  }
+
+  &__wrapperPrice{
+    max-width: 585px;
+    width: 100%;
+    margin:0 auto;
+  }
+
+  &__center{
+    text-align: center;
+  }
+
+  &__bottom{
+    display: grid;
+    grid-gap: 75px;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom:1px solid #D7D7D7;
+    padding:15px 0px;
+  }
+
+  .filter-checkbox{
+    flex-direction: row;
+  }
+}
+
 .banner-slidebar{
   background: #F9F9F9;
   margin-top: 50px;
@@ -3861,6 +3950,11 @@ button:hover {
     }
   }
 
+}
+
+.product-page-bottom{
+  border-bottom: 1px solid #D7D7D7;
+  padding-bottom: 30px;
 }
 
 @media (max-width: 1330px) {
