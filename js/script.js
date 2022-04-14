@@ -424,6 +424,32 @@ window.addEventListener("load", function() {
         }
     }
 
+    let IndividualSwiperMain = document.querySelector(".individual-include__swiper-main");
+    let IndividualSwiperSub = document.querySelector(".individual-include__swiper-sub");
+    if(IndividualSwiperMain !== null && IndividualSwiperSub !== null){
+        var swiperSub = new Swiper(IndividualSwiperSub, {
+            loop: true,
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+        var swiperMain = new Swiper(IndividualSwiperMain, {
+            loop: true,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+                swiper: swiperSub,
+            },
+        });
+        lightGallery(IndividualSwiperMain, {
+            selector: '.individual-include__swiper-item',
+        });
+    }
+
 
 
     var skroll = new Skroll()
