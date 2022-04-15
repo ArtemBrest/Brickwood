@@ -272,6 +272,21 @@ window.addEventListener("load", function() {
             });
         }
     }
+    let PortfolioListWrapper = document.querySelector(".portfolio-list__wrapper");
+    if(PortfolioListWrapper !== null){
+        lightGallery(PortfolioListWrapper, {
+            selector: '.portfolio-list__item',
+        });
+    }
+    let PortfolioReviewWrapper = document.querySelector(".portfolio-review__wrapper");
+    if(PortfolioReviewWrapper !== null){
+        lightGallery(PortfolioReviewWrapper, {
+            selector: '.portfolio-review__column',
+            plugins: [lgVideo],
+        });
+    }
+
+
     let HowDoWorkSwiper = document.querySelector(".how-do-work__swiper");
     if(HowDoWorkSwiper !== null){
         var swiper = new Swiper(HowDoWorkSwiper, {
