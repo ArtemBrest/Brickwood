@@ -10,6 +10,7 @@ function fadeIn(el, display) {
         }
     })();
 };
+
 function fadeOut(el) {
     el.style.opacity = 1;
     (function fade() {
@@ -20,27 +21,51 @@ function fadeOut(el) {
         }
     })();
 };
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
     let Fade = document.querySelector(".fade");
     let ModalThanks = document.getElementById("ModalThanks");
     let Modal = document.querySelector(".modal");
     let ModalClose = document.querySelector(".modal__close");
-    if(Modal !== null && Fade !== null && ModalThanks !== null){
-        Fade.addEventListener("click",function(e){
+    if (Modal !== null && Fade !== null && ModalThanks !== null) {
+        Fade.addEventListener("click", function (e) {
             fadeOut(ModalThanks);
             fadeOut(Modal);
             fadeOut(Fade);
         });
     }
-    if(Modal !== null && Fade !== null && ModalClose !== null){
-        ModalClose.addEventListener("click",function(e){
+    if (Modal !== null && Fade !== null && ModalClose !== null) {
+        ModalClose.addEventListener("click", function (e) {
             fadeOut(Modal);
             fadeOut(Fade);
         });
     }
+
+    let HeaderMobBtn = document.querySelector(".menu__btn");
+    let MenuMob = document.querySelector(".menu-mob");
+    let MenuOverlay = document.querySelector(".menu-overlay");
+    if (HeaderMobBtn !== null && MenuMob !== null && MenuOverlay !== null) {
+        HeaderMobBtn.addEventListener("click", function () {
+            if (HeaderMobBtn.classList.contains("menu__btn_active")) {
+                HeaderMobBtn.classList.remove("menu__btn_active");
+                fadeOut(MenuMob);
+                fadeOut(MenuOverlay)
+            } else {
+                HeaderMobBtn.classList.add("menu__btn_active");
+                fadeIn(MenuMob);
+                fadeIn(MenuOverlay)
+            }
+        });
+        MenuOverlay.addEventListener("click", function () {
+            if (HeaderMobBtn.classList.contains("active")) {
+                HeaderMobBtn.classList.remove("active");
+                fadeOut(MenuMob);
+                fadeOut(MenuOverlay)
+            }
+        })
+    }
     let tabLinks = document.querySelectorAll(".credit-calc-tabs__item");
     let tabPanels = document.querySelectorAll(".credit-calc-content__item");
-    if(tabPanels !== null && tabLinks !== null) {
+    if (tabPanels !== null && tabLinks !== null) {
         for (let el of tabLinks) {
             el.addEventListener("click", e => {
                 e.preventDefault();
@@ -60,7 +85,7 @@ window.addEventListener("load", function() {
     }
     let tabLinksSub = document.querySelectorAll(".credit-calc-content-tabs__item");
     let tabPanelsSub = document.querySelectorAll(".credit-calc-content-info__item");
-    if(tabPanelsSub !== null && tabLinksSub !== null) {
+    if (tabPanelsSub !== null && tabLinksSub !== null) {
         for (let el of tabLinksSub) {
             el.addEventListener("click", e => {
                 e.preventDefault();
@@ -82,11 +107,12 @@ window.addEventListener("load", function() {
     var scrollToTopBtn = document.querySelector(".up");
     if (scrollToTopBtn !== null) {
         document.addEventListener("scroll", handleScroll);
+
         function handleScroll() {
             var scrollableHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             var GOLDEN_RATIO = 0.2;
 
-            if ((document.documentElement.scrollTop / scrollableHeight ) > GOLDEN_RATIO) {
+            if ((document.documentElement.scrollTop / scrollableHeight) > GOLDEN_RATIO) {
                 //show button
                 scrollToTopBtn.style.opacity = "1";
             } else {
@@ -94,8 +120,10 @@ window.addEventListener("load", function() {
                 scrollToTopBtn.style.opacity = "0";
             }
         }
+
         scrollToTopBtn.addEventListener("click", scrollToTop);
     }
+
     function scrollToTop() {
         window.scrollTo({
             top: 0,
@@ -104,7 +132,7 @@ window.addEventListener("load", function() {
     }
 
     let PopupBtn = document.querySelectorAll(".PopupBtn");
-    if(PopupBtn !== null) {
+    if (PopupBtn !== null) {
         for (let el of PopupBtn) {
             el.addEventListener("click", function () {
                 fadeIn(Modal);
@@ -115,9 +143,9 @@ window.addEventListener("load", function() {
 
 
     let HeaderMenuItem = document.querySelectorAll(".menu__item");
-    if(HeaderMenuItem !== null){
-        for (let i = 0; i < HeaderMenuItem.length; i++){
-            if(HeaderMenuItem[i].querySelector(".menu__sub")){
+    if (HeaderMenuItem !== null) {
+        for (let i = 0; i < HeaderMenuItem.length; i++) {
+            if (HeaderMenuItem[i].querySelector(".menu__sub")) {
                 let svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
                 svg.setAttribute("class", "menu__item-icon");
                 svg.setAttribute("viewBox", "0 0 14 8");
@@ -134,21 +162,21 @@ window.addEventListener("load", function() {
             HeaderMenuItem[i].addEventListener("mouseenter", function () {
                 mouseenter_ev = setTimeout(() => {
                     HeaderMenuItem[i].classList.add("menu__item_active");
-                },100);
-                if(HeaderMenuItem[i].querySelector(".menu__sub")){
+                }, 100);
+                if (HeaderMenuItem[i].querySelector(".menu__sub")) {
                     HeaderMenuItem[i].querySelector(".menu__sub").style.display = "flex";
                 }
-                if(HeaderMenuItem[i].querySelector(".building__wrapper")){
+                if (HeaderMenuItem[i].querySelector(".building__wrapper")) {
                     HeaderMenuItem[i].querySelector(".building__wrapper").style.display = "block";
                 }
             });
             HeaderMenuItem[i].addEventListener("mouseleave", function () {
                 clearTimeout(mouseenter_ev);
                 HeaderMenuItem[i].classList.remove("menu__item_active");
-                if(HeaderMenuItem[i].querySelector(".menu__sub")){
+                if (HeaderMenuItem[i].querySelector(".menu__sub")) {
                     HeaderMenuItem[i].querySelector(".menu__sub").style.display = "none";
                 }
-                if(HeaderMenuItem[i].querySelector(".building__wrapper")){
+                if (HeaderMenuItem[i].querySelector(".building__wrapper")) {
                     HeaderMenuItem[i].querySelector(".building__wrapper").style.display = "none";
                 }
             });
@@ -156,7 +184,7 @@ window.addEventListener("load", function() {
     }
 
     let ProjectSwiper = document.querySelector(".project__swiper");
-    if(ProjectSwiper !== null){
+    if (ProjectSwiper !== null) {
         var swiper = new Swiper(ProjectSwiper, {
             slidesPerView: 1,
             spaceBetween: 0,
@@ -164,16 +192,16 @@ window.addEventListener("load", function() {
                 nextEl: ".project__btn-next",
                 prevEl: ".project__btn-prev",
             },
-            breakpoints:{
-                1235:{
-                    slidesPerView:3,
+            breakpoints: {
+                1235: {
+                    slidesPerView: 3,
                     spaceBetween: 30,
                 }
             },
         });
     }
     let ProjectOtherSwiper = document.querySelector(".project-other__swiper");
-    if(ProjectOtherSwiper !== null){
+    if (ProjectOtherSwiper !== null) {
         var swiper = new Swiper(ProjectOtherSwiper, {
             slidesPerView: "auto",
             spaceBetween: 0,
@@ -182,8 +210,8 @@ window.addEventListener("load", function() {
                 nextEl: ".project__btn-next",
                 prevEl: ".project__btn-prev",
             },
-            breakpoints:{
-                1235:{
+            breakpoints: {
+                1235: {
                     slidesPerView: "auto",
                     spaceBetween: 30,
                 }
@@ -192,7 +220,7 @@ window.addEventListener("load", function() {
     }
     let ProductSwiperMain = document.querySelector(".single-product__swiper-main");
     let ProductSwiperSub = document.querySelector(".single-product__swiper-sub");
-    if(ProductSwiperMain !== null && ProductSwiperSub !== null){
+    if (ProductSwiperMain !== null && ProductSwiperSub !== null) {
         var swiperSub = new Swiper(ProductSwiperSub, {
             loop: true,
             spaceBetween: 10,
@@ -217,7 +245,7 @@ window.addEventListener("load", function() {
     }
     let ProductLinks = document.querySelectorAll(".tab__btn");
     let ProductPanels = document.querySelectorAll(".tab__content");
-    if(ProductPanels !== null && ProductLinks !== null) {
+    if (ProductPanels !== null && ProductLinks !== null) {
         for (let el of ProductLinks) {
             el.addEventListener("click", e => {
                 e.preventDefault();
@@ -237,7 +265,7 @@ window.addEventListener("load", function() {
     }
 
     let ProductGallery = document.querySelectorAll(".tab-gallery");
-    if(ProductGallery !== null){
+    if (ProductGallery !== null) {
         for (let i = 0; i < ProductGallery.length; i++) {
             lightGallery(ProductGallery[i], {
                 selector: '.tab-gallery__card',
@@ -246,7 +274,7 @@ window.addEventListener("load", function() {
     }
 
     let PortfolioSwiper = document.querySelector(".portfolio__swiper");
-    if(PortfolioSwiper !== null){
+    if (PortfolioSwiper !== null) {
         var swiper = new Swiper(PortfolioSwiper, {
             slidesPerView: 1,
             spaceBetween: 0,
@@ -255,8 +283,8 @@ window.addEventListener("load", function() {
                 nextEl: ".portfolio__btn-next",
                 prevEl: ".portfolio__btn-prev",
             },
-            breakpoints:{
-                1235:{
+            breakpoints: {
+                1235: {
                     slidesPerView: "auto",
                     spaceBetween: 30,
                 }
@@ -264,8 +292,8 @@ window.addEventListener("load", function() {
         });
     }
     let PortfolioVideo = document.querySelectorAll(".portfolio__video");
-    if(PortfolioVideo !== null) {
-        for (let i = 0; i < PortfolioVideo.length; i++){
+    if (PortfolioVideo !== null) {
+        for (let i = 0; i < PortfolioVideo.length; i++) {
             lightGallery(PortfolioVideo[i], {
                 selector: '.card__play',
                 plugins: [lgVideo],
@@ -273,13 +301,13 @@ window.addEventListener("load", function() {
         }
     }
     let PortfolioListWrapper = document.querySelector(".portfolio-list__wrapper");
-    if(PortfolioListWrapper !== null){
+    if (PortfolioListWrapper !== null) {
         lightGallery(PortfolioListWrapper, {
             selector: '.portfolio-list__item',
         });
     }
     let PortfolioReviewWrapper = document.querySelector(".portfolio-review__wrapper");
-    if(PortfolioReviewWrapper !== null){
+    if (PortfolioReviewWrapper !== null) {
         lightGallery(PortfolioReviewWrapper, {
             selector: '.portfolio-review__column',
             plugins: [lgVideo],
@@ -288,7 +316,7 @@ window.addEventListener("load", function() {
 
 
     let HowDoWorkSwiper = document.querySelector(".how-do-work__swiper");
-    if(HowDoWorkSwiper !== null){
+    if (HowDoWorkSwiper !== null) {
         var swiper = new Swiper(HowDoWorkSwiper, {
             slidesPerView: 1,
             spaceBetween: 0,
@@ -299,17 +327,18 @@ window.addEventListener("load", function() {
         });
     }
     let HowDoWorkVideo = document.getElementById("how-do-work__video");
-    if(HowDoWorkVideo !== null) {
+    if (HowDoWorkVideo !== null) {
         lightGallery(HowDoWorkVideo, {
             selector: '.how-do-work__play',
             plugins: [lgVideo],
         });
     }
+
     function initAcc(elem, option) {
         let item = elem.querySelectorAll(".faq__card-header");
         let item_content = elem.querySelectorAll(".faq__card-text");
         for (let i = 0; i < item.length; i++) {
-            item[i].addEventListener('click', function(e) {
+            item[i].addEventListener('click', function (e) {
                 let content = this.parentElement.querySelector(".faq__card-text");
                 let mouseenter_ev;
                 if (!this.classList.contains('faq__card-header_active')) {
@@ -340,15 +369,17 @@ window.addEventListener("load", function() {
             });
         }
     }
+
     let FAQ = document.querySelector(".faq");
     if (FAQ !== null) {
         initAcc(FAQ, false);
     }
+
     function initAcccCredit(elem, option) {
         let item = elem.querySelectorAll(".info-revert__name");
         let item_content = elem.querySelectorAll(".info-revert__caption");
         for (let i = 0; i < item.length; i++) {
-            item[i].addEventListener('click', function(e) {
+            item[i].addEventListener('click', function (e) {
                 let content = this.parentElement.querySelector(".info-revert__caption");
                 let mouseenter_ev;
                 if (!this.classList.contains('info-revert__name--active')) {
@@ -379,12 +410,13 @@ window.addEventListener("load", function() {
             });
         }
     }
+
     let CreditContent = document.querySelector(".credit-calc__content");
     if (CreditContent !== null) {
         initAcccCredit(CreditContent, false);
     }
     let HelpfulSwiper = document.querySelector(".helpful__swiper");
-    if(HelpfulSwiper !== null){
+    if (HelpfulSwiper !== null) {
         var swiper = new Swiper(HelpfulSwiper, {
             slidesPerView: 1,
             spaceBetween: 0,
@@ -393,8 +425,8 @@ window.addEventListener("load", function() {
                 nextEl: ".helpful__btn-next",
                 prevEl: ".helpful__btn-prev",
             },
-            breakpoints:{
-                1235:{
+            breakpoints: {
+                1235: {
                     slidesPerView: "auto",
                     spaceBetween: 30,
                 }
@@ -402,7 +434,7 @@ window.addEventListener("load", function() {
         });
     }
     let AboutVideoSwiper = document.querySelector(".about-video__swiper");
-    if(AboutVideoSwiper !== null){
+    if (AboutVideoSwiper !== null) {
         var swiper = new Swiper(AboutVideoSwiper, {
             slidesPerView: 1,
             spaceBetween: 0,
@@ -411,8 +443,8 @@ window.addEventListener("load", function() {
                 nextEl: ".about-video__btn-next",
                 prevEl: ".about-video__btn-prev",
             },
-            breakpoints:{
-                1235:{
+            breakpoints: {
+                1235: {
                     slidesPerView: 1,
                     spaceBetween: 0,
                 }
@@ -424,7 +456,7 @@ window.addEventListener("load", function() {
         });
     }
     let TeamSwiper = document.querySelector(".team__swiper");
-    if(TeamSwiper !== null){
+    if (TeamSwiper !== null) {
         var swiper = new Swiper(TeamSwiper, {
             slidesPerView: 1,
             spaceBetween: 0,
@@ -433,8 +465,8 @@ window.addEventListener("load", function() {
                 nextEl: ".team__btn-next",
                 prevEl: ".team__btn-prev",
             },
-            breakpoints:{
-                1235:{
+            breakpoints: {
+                1235: {
                     slidesPerView: "auto",
                     spaceBetween: 30,
                 }
@@ -446,26 +478,25 @@ window.addEventListener("load", function() {
         });
     }
     let LookSlider = document.getElementById("look__slider");
-    if(LookSlider !== null){
+    if (LookSlider !== null) {
         Cocoen.create(LookSlider);
     }
 
-    let ServicesItem =  document.querySelectorAll(".services-grid-item__arrow_full");
-    let ServicesItemClose =  document.querySelectorAll(".services-grid-item__icon");
-    if(ServicesItem !== null && ServicesItemClose !== null){
-        for (let i = 0; i < ServicesItem.length; i++){
+    let ServicesItem = document.querySelectorAll(".services-grid-item__arrow_full");
+    let ServicesItemClose = document.querySelectorAll(".services-grid-item__icon");
+    if (ServicesItem !== null && ServicesItemClose !== null) {
+        for (let i = 0; i < ServicesItem.length; i++) {
             ServicesItem[i].addEventListener("click", function () {
                 var parent = ServicesItem[i].parentNode;
-                if(parent.classList.contains("services-grid-item--active")){
+                if (parent.classList.contains("services-grid-item--active")) {
                     parent.classList.remove("services-grid-item--active");
-                }
-                else{
+                } else {
                     parent.classList.add("services-grid-item--active");
                 }
             });
             ServicesItemClose[i].addEventListener("click", function () {
                 var parent = ServicesItemClose[i].parentNode.parentNode;
-                if(parent.classList.contains("services-grid-item--active")){
+                if (parent.classList.contains("services-grid-item--active")) {
                     parent.classList.remove("services-grid-item--active");
                 }
             });
@@ -474,7 +505,7 @@ window.addEventListener("load", function() {
 
     let IndividualSwiperMain = document.querySelector(".individual-include__swiper-main");
     let IndividualSwiperSub = document.querySelector(".individual-include__swiper-sub");
-    if(IndividualSwiperMain !== null && IndividualSwiperSub !== null){
+    if (IndividualSwiperMain !== null && IndividualSwiperSub !== null) {
         var swiperSub = new Swiper(IndividualSwiperSub, {
             loop: true,
             spaceBetween: 10,
@@ -499,27 +530,26 @@ window.addEventListener("load", function() {
     }
 
 
-
     var skroll = new Skroll()
-        .addAnimation("custom",{
-            start:function(el){
+        .addAnimation("custom", {
+            start: function (el) {
                 el.style["opacity"] = 0;
             },
-            end:function(el){
+            end: function (el) {
                 el.style["opacity"] = 1;
             }
-        }).add(".anim1",{
+        }).add(".anim1", {
             animation: "custom",
             duration: 1000,
             delay: 300
         })
-        .add(".anim5",{
-            animation:"slideInLeft",
+        .add(".anim5", {
+            animation: "slideInLeft",
             delay: 300,
             duration: 1000,
         })
-        .add(".anim6",{
-            animation:"slideInRight",
+        .add(".anim6", {
+            animation: "slideInRight",
             delay: 300,
             duration: 1000,
         }).init();

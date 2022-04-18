@@ -473,7 +473,7 @@ button:hover {
 /* SECTION HEADER */
 .header{
   position: relative;
-  z-index: 10;
+  z-index: 99;
   background: #F9F9F9;
   &__row{
     padding: 10px 0;
@@ -607,6 +607,17 @@ button:hover {
   }
   &-mob{
     display: none;
+    padding: 10px;
+    &__item{
+      width: 100%;
+      padding: 5px 0;
+    }
+    &__link{
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #555555;
+    }
   }
 }
 /*  MAIN BANNER */
@@ -4034,7 +4045,6 @@ button:hover {
       justify-content: space-between;
     }
   }
-
   .menu{
     &__list{
       display: none;
@@ -4052,6 +4062,52 @@ button:hover {
 @media (max-width: 767px) {
   .container {
     width: 100%;
+  }
+  .h1-banner{
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: #F8F8F8;
+    &_smal{
+      font-size: 26px;
+      line-height: 120%;
+    }
+  }
+  .h1-block{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 115%;
+    text-transform: uppercase;
+    color: @text-color-black;
+    &_column{
+      flex-flow: column-reverse;
+      align-items: flex-start;
+    }
+    &__line{
+      display: block;
+      width: 35px;
+      height: 3px;
+      background: @text-color-black;
+    }
+  }
+  .h2{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    color: #000000;
+  }
+  .m150{
+    margin: 70px 0;
+    &_first{
+      margin: 25px 0 70px;
+    }
+  }
+  .m30{
+    margin: 30px 0;
   }
   .header{
     &__logo{
@@ -4101,14 +4157,25 @@ button:hover {
     width: 100%;
   }
   .modal_thanks {
-    z-index: 999;
-    width: 90%;
-    padding: 55px 10px;
+    width: 100%;
+    padding: 80px 10px;
   }
   .modal {
-    width: 90%;
-    &_form {
-      padding: 39px 10px;
+    width: 100%;
+    &__close{
+      &-icon{
+        width: 25px;
+        height: 25px;
+      }
+    }
+    &__title{
+      margin: 0 0 30px;
+    }
+    &__form {
+      padding: 80px 10px;
+      &-btn{
+        width: 100%;
+      }
     }
   }
 }
