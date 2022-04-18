@@ -186,13 +186,17 @@ window.addEventListener("load", function () {
     let ProjectSwiper = document.querySelector(".project__swiper");
     if (ProjectSwiper !== null) {
         var swiper = new Swiper(ProjectSwiper, {
-            slidesPerView: 1,
-            spaceBetween: 0,
+            slidesPerView: "auto",
+            spaceBetween: 10,
             navigation: {
                 nextEl: ".project__btn-next",
                 prevEl: ".project__btn-prev",
             },
             breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
                 1235: {
                     slidesPerView: 3,
                     spaceBetween: 30,
@@ -204,16 +208,17 @@ window.addEventListener("load", function () {
     if (ProjectOtherSwiper !== null) {
         var swiper = new Swiper(ProjectOtherSwiper, {
             slidesPerView: "auto",
-            spaceBetween: 0,
-            centeredSlides: true,
+            spaceBetween: 10,
+            centeredSlides: false,
             navigation: {
                 nextEl: ".project__btn-next",
                 prevEl: ".project__btn-prev",
             },
             breakpoints: {
-                1235: {
+                768: {
                     slidesPerView: "auto",
                     spaceBetween: 30,
+                    centeredSlides: true,
                 }
             },
         });
@@ -276,17 +281,18 @@ window.addEventListener("load", function () {
     let PortfolioSwiper = document.querySelector(".portfolio__swiper");
     if (PortfolioSwiper !== null) {
         var swiper = new Swiper(PortfolioSwiper, {
-            slidesPerView: 1,
-            spaceBetween: 0,
+            slidesPerView: "auto",
+            spaceBetween: 10,
             centeredSlides: true,
             navigation: {
                 nextEl: ".portfolio__btn-next",
                 prevEl: ".portfolio__btn-prev",
             },
             breakpoints: {
-                1235: {
+                768: {
                     slidesPerView: "auto",
                     spaceBetween: 30,
+                    centeredSlides: true,
                 }
             },
         });
@@ -418,17 +424,18 @@ window.addEventListener("load", function () {
     let HelpfulSwiper = document.querySelector(".helpful__swiper");
     if (HelpfulSwiper !== null) {
         var swiper = new Swiper(HelpfulSwiper, {
-            slidesPerView: 1,
-            spaceBetween: 0,
-            centeredSlides: true,
+            slidesPerView: "auto",
+            spaceBetween: 10,
+            centeredSlides: false,
             navigation: {
                 nextEl: ".helpful__btn-next",
                 prevEl: ".helpful__btn-prev",
             },
             breakpoints: {
-                1235: {
+                768: {
                     slidesPerView: "auto",
                     spaceBetween: 30,
+                    centeredSlides: true,
                 }
             },
         });

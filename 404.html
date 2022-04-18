@@ -86,6 +86,11 @@
                             </ul>
                         </li>
                     </ul>
+                    <div class="menu__btn">
+                        <span class="menu__btn-line"></span>
+                        <span class="menu__btn-line"></span>
+                        <span class="menu__btn-line"></span>
+                    </div>
                 </div>
             </div>
             <div class="header__right df-center">
@@ -93,8 +98,31 @@
                     <img src="img/svg/phone.svg" alt="" class="header__phone-icon">
                     <a href="tel:+78432452945" class="header__phone-link">+7 (843) 245-29-45</a>
                 </div>
-                <button class="btn-main PopupBtn">Заказать звонок</button>
+                <button class="btn-main PopupBtn header__btn header__btn_mob">
+                    Заказать звонок
+                    <svg class="header__btn-icon" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/sprites.svg#arrow-up-bold"></use>
+                    </svg>
+                </button>
             </div>
+        </div>
+        <div class="header__meu menu-mob">
+            <ul class="menu-mob__list">
+                <li class="menu-mob__item"><a href="#" class="menu-mob__link"></a></li>
+                <li class="menu-mob__item"><a href="#" class="menu-mob__link">Проекты</a></li>
+                <li class="menu-mob__item"><a href="#" class="menu-mob__link">Калькулятор</a></li>
+                <li class="menu-mob__item"><a href="#" class="menu-mob__link">Акции</a></li>
+                <li class="menu-mob__item"><a href="#" class="menu-mob__link">О компании</a></li>
+                <li class="menu-mob__item"><a href="#" class="menu-mob__link">Портфолио</a></li>
+                <li class="menu-mob__item"><a href="#" class="menu-mob__link">Дополнительные услуги</a></li>
+                <li class="menu-mob__item"><a href="#" class="menu-mob__link">Индивидуальное проектирование</a></li>
+                <li class="menu-mob__item"><a href="#" class="menu-mob__link">Технология строительства</a></li>
+                <li class="menu-mob__item"><a href="#" class="menu-mob__link">Экскурсия</a></li>
+                <li class="menu-mob__item"><a href="#" class="menu-mob__link">Кредитование</a></li>
+                <li class="menu-mob__item"><a href="#" class="menu-mob__link">Выберите дизайн своего дома</a></li>
+                <li class="menu-mob__item"><a href="#" class="menu-mob__link">Новости</a></li>
+                <li class="menu-mob__item"><a href="#" class="menu-mob__link">Контакты</a></li>
+            </ul>
         </div>
     </div>
 </header>
@@ -107,11 +135,12 @@
                     <a href="#" class="error-page__btn btn-main">Вернуться на главную</a>
                 </div>
                 <img src="img/404.png" alt="" class="error-page__img">
+                <a href="#" class="error-page__btn error-page__btn_mob btn-main">Вернуться на главную</a>
             </div>
         </div>
     </section>
 </main>
-<footer class="footer">
+<!--<footer class="footer">
     <div class="container">
         <div class="footer__grid">
             <div class="footer__column footer-column">
@@ -119,7 +148,7 @@
                 <div class="footer-column__info"><span>ИНН:</span> 1660337884</div>
                 <div class="footer-column__info"><span>ОГРН:</span> 1191690092758</div>
                 <div class="footer-column__info"><span>КПП:</span> 166001001</div>
-                <div class="footer-column__info footer-column__info--last">*Информация носит справочный характер</div>
+                <div class="footer-column__info footer-column__info&#45;&#45;last">*Информация носит справочный характер</div>
             </div>
             <div class="footer__column footer-column">
                 <div class="footer-column__title">Контакты</div>
@@ -144,7 +173,7 @@
             </div>
         </div>
     </div>
-</footer>
+</footer>-->
 <div class="fade"></div>
 <div class="modal-thanks" id="ModalThanks">
     <span class="h2 modal-thanks__title">Спасибо! Ваша заявка отправлена.</span>
