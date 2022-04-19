@@ -105,24 +105,34 @@
 </header>
 
 <main>
-    <section class="portfolio-list">
+    <section class="portfolio-list m150_first">
         <div class="container">
             <div class="h1-block portfolio-list__h1">
                 Бриквуд БВ-103, Верхний Услон
             </div>
             <div class="portfolio-list__wrapper">
-                <a href="#" class="portfolio-list__item"><img src="img/portfolio/portfolio-1.jpg"></a>
-                <a href="#" class="portfolio-list__item"><img src="img/portfolio/portfolio-2.jpg"></a>
-                <a href="#" class="portfolio-list__item"><img src="img/portfolio/portfolio-3.jpg"></a>
-                <a href="#" class="portfolio-list__item"><img src="img/portfolio/portfolio-4.jpg"></a>
-                <a href="#" class="portfolio-list__item"><img src="img/portfolio/portfolio-5.jpg"></a>
-                <a href="#" class="portfolio-list__item"><img src="img/portfolio/portfolio-6.jpg"></a>
+                <div class="portfolio-list__item" data-src="img/portfolio/portfolio-1.jpg">
+                    <img src="img/portfolio/portfolio-1.jpg" alt="">
+                </div>
+                <div class="portfolio-list__item" data-src="img/portfolio/portfolio-2.jpg">
+                    <img src="img/portfolio/portfolio-2.jpg" alt="">
+                </div>
+                <div class="portfolio-list__item" data-src="img/portfolio/portfolio-3.jpg">
+                    <img src="img/portfolio/portfolio-3.jpg" alt="">
+                </div>
+                <div class="portfolio-list__item" data-src="img/portfolio/portfolio-4.jpg">
+                    <img src="img/portfolio/portfolio-4.jpg" alt="">
+                </div>
+                <div class="portfolio-list__item" data-src="img/portfolio/portfolio-5.jpg">
+                    <img src="img/portfolio/portfolio-5.jpg" alt="">
+                </div>
+                <div class="portfolio-list__item" data-src="img/portfolio/portfolio-6.jpg">
+                    <img src="img/portfolio/portfolio-6.jpg" alt="">
+                </div>
             </div>
         </div>
     </section>
-
-
-    <section class="portfolio-review">
+    <section class="portfolio-review m150">
         <div class="container">
             <div class="portfolio-review__wrapper">
                 <div class="portfolio-review__column">
@@ -142,14 +152,17 @@
                     </div>
                     <a href="#" class="btn-main">Смотреть каталог проектов</a>
                 </div>
-                <div class="portfolio-review__column portfolio-review__column--right">
+                <div class="portfolio-review__column portfolio-review__column--right" data-src="https://www.youtube.com/embed/20eA2rEoRjs">
                     <img src="img/video-img.jpg">
-                    <img src="img/video-icon.png" class="portfolio-review__videoicon">
+                    <div class="portfolio-review__column-play" >
+                        <svg width="32" height="37" viewBox="0 0 32 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="img/sprites.svg?#polygon-icon"></use>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
     <section class="comlections m150">
         <div class="container">
             <div class="comlections__wrapper">
@@ -206,8 +219,6 @@
             </div>
         </div>
     </section>
-
-
     <section class="tabs-form m150">
             <div class="form-tabs">
                 <div class="container">
@@ -249,7 +260,6 @@
             </span>
             </div>
     </section>
-
     <section class="map m150">
         <div class="container">
             <div class="h1-block map__title">
@@ -326,6 +336,7 @@
 <script src="lightGallery-master/dist/plugins/video/lg-video.min.js"></script>
 <script src="js/swiper-bundle.min.js"></script>
 <script src="js/cocoen.js"></script>
+<script src="js/skroll.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
