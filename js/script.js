@@ -229,9 +229,20 @@ window.addEventListener("load", function () {
         var swiperSub = new Swiper(ProductSwiperSub, {
             loop: true,
             spaceBetween: 10,
-            slidesPerView: 5,
+            slidesPerView: 2,
             freeMode: true,
             watchSlidesProgress: true,
+            breakpoints: {
+                580: {
+                    slidesPerView: 3,
+                },
+                768: {
+                    slidesPerView: 4,
+                },
+                1235: {
+                    slidesPerView: 5,
+                }
+            },
         });
         var swiperMain = new Swiper(ProductSwiperMain, {
             loop: true,
@@ -465,16 +476,17 @@ window.addEventListener("load", function () {
     let TeamSwiper = document.querySelector(".team__swiper");
     if (TeamSwiper !== null) {
         var swiper = new Swiper(TeamSwiper, {
-            slidesPerView: 1,
-            spaceBetween: 0,
-            centeredSlides: true,
+            slidesPerView: "auto",
+            spaceBetween: 10,
+            centeredSlides: false,
             navigation: {
                 nextEl: ".team__btn-next",
                 prevEl: ".team__btn-prev",
             },
             breakpoints: {
-                1235: {
+                768: {
                     slidesPerView: "auto",
+                    centeredSlides: true,
                     spaceBetween: 30,
                 }
             },
@@ -484,6 +496,13 @@ window.addEventListener("load", function () {
             plugins: [lgVideo],
         });
     }
+    let TechnologyBannerMob = document.querySelector(".technology-banner")
+    if (TechnologyBannerMob !== null) {
+        lightGallery(TechnologyBannerMob, {
+            selector: '.technology-banner__mob',
+        });
+    }
+
     let LookSlider = document.getElementById("look__slider");
     if (LookSlider !== null) {
         Cocoen.create(LookSlider);
@@ -516,9 +535,17 @@ window.addEventListener("load", function () {
         var swiperSub = new Swiper(IndividualSwiperSub, {
             loop: true,
             spaceBetween: 10,
-            slidesPerView: 4,
+            slidesPerView: 2,
             freeMode: true,
             watchSlidesProgress: true,
+            breakpoints: {
+                580: {
+                    slidesPerView: 3,
+                },
+                768: {
+                    slidesPerView: 4,
+                }
+            },
         });
         var swiperMain = new Swiper(IndividualSwiperMain, {
             loop: true,
