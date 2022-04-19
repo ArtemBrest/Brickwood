@@ -2724,7 +2724,9 @@ button:hover {
     .tab{
       &__row{
         gap: 15px;
-        margin: 0 0 25px;
+        padding: 0 0 10px;
+        margin: 0 0 15px;
+        overflow-x: auto;
       }
       &__btn{
         justify-content: center;
@@ -2735,6 +2737,7 @@ button:hover {
         padding: 10px;
         background: transparent;
         border: 1px solid #868686;
+        min-width: fit-content;
         &_active,
         &:hover{
           color: @text-color-black;
@@ -2935,7 +2938,7 @@ button:hover {
       }
     }
     &-prev{
-      transform: rotate(180deg);
+      transform: rotate(180deg) translateY(50%);
     }
     &-next{
       left: initial;
@@ -3357,87 +3360,15 @@ button:hover {
 }
 /* SECTION BANNER TECHNOLOGY */
 .technology-banner{
-  min-height: 800px;
-  padding: 100px 180px 160px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  &__wrapper{
-    position: relative;
-    height: 100%;
-  }
-  &__block{
-    position: absolute;
-    left: 0;
-    top: 0;
-    padding: 0 0 0 15px;
-    border-left: 2px solid @main-color;
-    &-text{
-      display: block;
-      max-width: 240px;
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 24px;
-      color: #F9F9F9;
-    }
-  }
-  &__item{
-    position: absolute;
-    color: #F9F9F9;
-    display: flex;
-    flex-flow: column;
-    width: 225px;
-    &_right{
-      text-align: right;
-      align-items: flex-end;
-    }
-    &_left{
-      text-align: left;
-      align-items: flex-start;
-    }
-    &:nth-child(1){
-      right: 35%;
-      top: 0;
-    }
-    &:nth-child(2){
-      left: 35%;
-      top: 175px;
-    }
-    &:nth-child(3){
-      left: 35px;
-      top: 235px;
-    }
-    &:nth-child(4){
-      left: 21%;
-      top: 320px;
-    }
-    &:nth-child(5){
-      right: 35%;
-      top: 360px;
-    }
-    &:nth-child(6){
-      right: 0;
-      top: 360px;
-    }
-    &:nth-child(7){
-      left: 20px;
-      top: 430px;
-    }
-  }
-  &__title{
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    text-align: inherit;
-  }
-  &__text{
+  &__img{
     display: block;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 100%;
-    text-align: inherit;
-    margin: -50px 0 0;
-    max-width: 198px;
+    height: auto;
+    margin: 0 auto;
+    object-fit: cover;
+    max-width: 100%;
+  }
+  &__mob{
+    display: none;
   }
 }
 /* SECTION FEATURE */
@@ -3640,6 +3571,9 @@ button:hover {
     position: absolute;
     bottom: 0;
     left: 0;
+    &_mob{
+      display: none;
+    }
   }
 }
 /* SECTION INCLUDE INDIVIDUAL */
@@ -3672,6 +3606,9 @@ button:hover {
         right: 30px;
         bottom: 25px;
         cursor: pointer;
+      }
+      .individual-include__swiper-item{
+        padding: 0 0 50px;
       }
     }
     &-sub{
@@ -4208,6 +4145,23 @@ button:hover {
     }
   }
 
+
+  /* PAGE SINGLE PRODUCT */
+  .single-product{
+    &__group{
+      display: flex;
+      flex-flow: column-reverse;
+      gap: 50px;
+    }
+  }
+  /* SECTION TEAM */
+  .team{
+    &__swiper{
+      .swiper-wrapper{
+        margin-left: -285px;
+      }
+    }
+  }
   /* NEWS SINGLE PAGE */
   .single-page{
     .container{
@@ -4233,6 +4187,31 @@ button:hover {
       margin: 0;
     }
   }
+  /* SECTION BANNER INDIVIDUAL */
+  .individual-banner{
+    &__info{
+      display: flex;
+      flex-flow: column;
+      padding: 75px 0 0;
+      max-width: 440px;
+    }
+    &__img{
+      display: block;
+      position: absolute;
+      max-width: 500px;
+      height: auto;
+      right: 0;
+      top: 0;
+      z-index: 2;
+    }
+  }
+  /* SECTION INCLUDE INDIVIDUAL */
+  .individual-include{
+    &__slider{
+      width: 450px;
+    }
+  }
+
 }
 @media (max-width: 991px) {
   .container {
@@ -4386,6 +4365,22 @@ button:hover {
     }
   }
 
+  /* SECTION ABOUT ADVANTAGES */
+  .about-advantages{
+    &__cards{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-gap: 30px;
+    }
+  }
+  /* SECTION TEAM */
+  .team{
+    &__swiper{
+      .swiper-wrapper{
+        margin-left: -175px;
+      }
+    }
+  }
   /* NEWS SINGLE PAGE */
   .single-page{
     &__columns{
@@ -4396,12 +4391,57 @@ button:hover {
       display: none;
     }
   }
+  /* SECTION FEATURE */
+  .feature{
+    &__wrapper{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 30px;
+    }
+  }
   /* PAGE CONTACT */
   .contact{
     &__wrapper{
       display: grid;
       grid-template-columns: 1fr;
       grid-gap: 50px;
+    }
+  }
+  /* SECTION BANNER INDIVIDUAL */
+  .individual-banner{
+    padding: 40px 0 0;
+    &__info{
+      display: flex;
+      flex-flow: column;
+      padding: 75px 0 30px;
+      max-width: 100%;
+    }
+    &__img{
+      display: block;
+      position: static;
+      max-width: 100%;
+      object-fit: cover;
+      height: auto;
+      z-index: 2;
+    }
+    &__line{
+      display: none;
+      &_mob{
+        display: block;
+        position: static;
+        width: ~'calc(100% + 20px)';
+        margin: 0 -10px;
+      }
+    }
+  }
+  /* SECTION INCLUDE INDIVIDUAL */
+  .individual-include{
+    &__wrapper{
+      display: block;
+    }
+    &__slider{
+      width: 100%;
+      margin: 0 0 30px;
     }
   }
 }
@@ -4615,6 +4655,63 @@ button:hover {
     }
   }
 
+
+  /* PAGE SINGLE PRODUCT */
+  .single-product{
+    &__swiper{
+      &-main{
+        height: 510px;
+      }
+      &-sub{
+        height: 100px;
+        margin: 0;
+      }
+    }
+    &__btn{
+      &-next,
+      &-prev{
+        position: absolute;
+        top: 210px;
+        opacity: 1;
+      }
+    }
+    &__box{
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid #D7D7D7;
+      padding: 15px 10px;
+    }
+    &__tabs{
+      .tab{
+        &-gallery{
+          display: grid;
+          grid-template-columns: repeat(2,1fr);
+          grid-gap: 15px;
+        }
+      }
+    }
+  }
+  /* SECTION ABOUT ADVANTAGES */
+  .about-advantages{
+    &__cards{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 30px;
+    }
+  }
+  /* SECTION TEAM */
+  .team{
+    &__swiper{
+      .swiper-wrapper{
+        margin: 0 0 0 10px;
+      }
+    }
+    &__card{
+      width: 320px;
+    }
+  }
   /* NEWS PAGE */
   .news{
     &__tabs{
@@ -4691,6 +4788,18 @@ button:hover {
       &_mob{
         display: flex;
         width: 100%;
+      }
+    }
+  }
+
+  .technology-banner {
+    &__img {
+      display: none;
+    }
+    &__mob {
+      display: block;
+      & .technology-banner__img{
+        display: block;
       }
     }
   }
@@ -5040,6 +5149,212 @@ button:hover {
       display: none;
     }
   }
+  /* PAGE SINGLE PRODUCT */
+  .single-product{
+    &__swiper{
+      &-main{
+        height: 230px;
+      }
+      &-sub{
+        height: 80px;
+        margin: 0;
+      }
+    }
+    &__btn{
+      &-next,
+      &-prev{
+        top: 100px;
+        left: -10px;
+      }
+      &-next{
+        left: initial;
+        right: -10px;
+      }
+    }
+    &__box{
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid #D7D7D7;
+      padding: 5px 5px;
+      &:last-child{
+        border: none;
+      }
+      &-title{
+        gap: 5px;
+        font-size: 10px;
+        line-height: 125%;
+      }
+      &-text{
+        font-size: 8px;
+        line-height: 125%;
+      }
+    }
+    &__tabs{
+      .tab{
+        &__row{
+          gap: 5px;
+          padding: 0 0 10px;
+          margin: 0 0 10px;
+          overflow-x: auto;
+        }
+        &__btn{
+          font-size: 14px;
+          line-height: 100%;
+        }
+        &-table{
+          display: grid;
+          grid-template-columns: 1fr;
+          &__row{
+            align-items: flex-start;
+            flex-flow: column;
+            gap: 5px;
+            & span:first-child{
+              font-size: 14px;
+              line-height: 125%;
+              max-width: 100%;
+            }
+            & span:last-child{
+              font-size: 14px;
+              line-height: 125%;
+              text-align: left;
+              max-width: 100%;
+            }
+          }
+        }
+        &-gallery{
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-gap: 10px;
+          &__card{
+            height: 180px;
+          }
+        }
+      }
+    }
+    &__aside{
+      padding: 25px 40px 35px;
+    }
+    &__title{
+      margin: 0 0 10px;
+    }
+    &__price{
+      font-size: 16px;
+      line-height: 115%;
+      margin: 0 0 20px;
+      &-old{
+        font-size: 12px;
+        line-height: 100%;
+        margin: 0 0 10px;
+        &:before{
+          bottom: 5px;
+        }
+        &:after{
+          bottom: 5px;
+        }
+      }
+    }
+    &__btn{
+      margin: 0 0 10px;
+      padding: 10px 30px;
+    }
+    &__link{
+      font-size: 16px;
+      line-height: 115%;
+      padding: 10px 12px;
+    }
+  }
+  /* SECTION ABOUT VIDEO AND PHOTO */
+  .about-video{
+    &__title{
+      margin: 0 0 25px;
+    }
+    &__item{
+      &-image{
+        display: block;
+        max-width: 100%;
+        height: auto;
+        min-height: 160px;
+        object-fit: cover;
+      }
+    }
+    &__btn{
+      &-prev,
+      &-next{
+        background: #F9F9F9;
+      }
+    }
+  }
+  /* SECTION ABOUT ADVANTAGES */
+  .about-advantages{
+    &__title{
+      margin: 0 0 25px;
+    }
+    &__cards{
+      display: grid;
+      grid-gap: 15px;
+      .card{
+        &__title{
+          font-size: 16px;
+          line-height: 115%;
+          margin: 0 0 5px;
+        }
+        &__text{
+          font-size: 14px;
+          line-height: 125%;
+        }
+      }
+    }
+  }
+  /* SECTION TEAM */
+  .team{
+    &__row{
+      margin: 0 0 25px;
+    }
+    &__btn{
+      display: none;
+    }
+    &__card{
+      width: 280px;
+      .card{
+        &__top{
+          display: block;
+          height: 320px;
+          margin-bottom: 10px;
+          position: relative;
+        }
+        &__name{
+          font-size: 16px;
+          line-height: 115%;
+        }
+        &__text{
+          font-size: 14px;
+          line-height: 100%;
+        }
+      }
+    }
+  }
+  /* SECTION FEATURE */
+  .feature{
+    &__wrapper{
+      grid-gap: 10px;
+    }
+    &__title{
+      margin: 0 0 15px;
+    }
+    &__banner{
+      width: 100%;
+      height: auto;
+      min-height: 240px;
+      &-img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
   /* NEWS PAGE */
   .news{
     &__title{
@@ -5185,6 +5500,107 @@ button:hover {
       & iframe{
         width: 100%;
         height: 100%;
+      }
+    }
+  }
+  /* SECTION EXCURSION BANNER */
+  .excursion-banner{
+    &__info{
+      padding: 110px 0 80px;
+      min-height: 400px;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      height: 100%;
+      margin-top: auto;
+    }
+    &__title{
+      margin: 0 0 65px;
+    }
+    &__btn{
+      width: 100%;
+    }
+  }
+  /* SECTION BANNER INDIVIDUAL */
+  .individual-banner{
+    margin: 0 0 70px;
+    padding: 30px 0 0;
+    &__info{
+      padding: 0 0 30px;
+      max-width: 100%;
+    }
+    &__title{
+      margin: 0 0 15px;
+    }
+    &__text{
+      font-size: 14px;
+      line-height: 125%;
+    }
+    &__img{
+      margin: 0 -10px;
+      max-width: none;
+      width: ~'calc(100% + 20px)';
+      min-height: 295px;
+    }
+  }
+  /* SECTION INCLUDE INDIVIDUAL */
+  .individual-include{
+    &__slider{
+      margin: 0 0 50px;
+      &-wrapper{
+        position: relative;
+        width: 100%;
+        margin: 0 0 40px;
+      }
+    }
+    &__swiper{
+      &-main{
+        height: 250px;
+        margin: 0 0 10px;
+      }
+    }
+    &__btn{
+      &-next,
+      &-prev{
+        opacity: 1;
+        top: 115px;
+      }
+    }
+    &__title{
+      max-width: 350px;
+      margin: 0 0 25px;
+    }
+    &__info{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 25px;
+      .item{
+        &__top{
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 0 0 10px;
+          font-size: 16px;
+          line-height: 115%;
+          margin: 0 0 10px;
+        }
+        &__text{
+          font-size: 14px;
+          line-height: 125%;
+          margin: 0 0 10px;
+        }
+        &__bottom{
+          padding: 20px 0 20px 10px;
+        }
+        &__list{
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-gap: 10px;
+          &-text{
+            font-size: 14px;
+            line-height: 100%;
+          }
+        }
       }
     }
   }
