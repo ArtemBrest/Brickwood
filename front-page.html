@@ -91,6 +91,11 @@
                             </ul>
                         </li>
                     </ul>
+                    <div class="menu__btn">
+                        <span class="menu__btn-line"></span>
+                        <span class="menu__btn-line"></span>
+                        <span class="menu__btn-line"></span>
+                    </div>
                 </div>
             </div>
             <div class="header__right df-center">
@@ -98,19 +103,42 @@
                     <img src="img/svg/phone.svg" alt="" class="header__phone-icon">
                     <a href="tel:+78432452945" class="header__phone-link">+7 (843) 245-29-45</a>
                 </div>
-                <button class="btn-main PopupBtn">Заказать звонок</button>
+                <button class="btn-main PopupBtn header__btn header__btn_mob">
+                    Заказать звонок
+                    <svg class="header__btn-icon" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/sprites.svg#arrow-up-bold"></use>
+                    </svg>
+                </button>
             </div>
+        </div>
+        <div class="header__meu menu-mob">
+            <ul class="menu-mob__list">
+                <li class="menu-mob__item"><a href="#" class="menu-mob__link"></a></li>
+                <li class="menu-mob__item"><a href="#" class="menu-mob__link">Проекты</a></li>
+                <li class="menu-mob__item"><a href="#" class="menu-mob__link">Калькулятор</a></li>
+                <li class="menu-mob__item"><a href="#" class="menu-mob__link">Акции</a></li>
+                <li class="menu-mob__item"><a href="#" class="menu-mob__link">О компании</a></li>
+                <li class="menu-mob__item"><a href="#" class="menu-mob__link">Портфолио</a></li>
+                <li class="menu-mob__item"><a href="#" class="menu-mob__link">Дополнительные услуги</a></li>
+                <li class="menu-mob__item"><a href="#" class="menu-mob__link">Индивидуальное проектирование</a></li>
+                <li class="menu-mob__item"><a href="#" class="menu-mob__link">Технология строительства</a></li>
+                <li class="menu-mob__item"><a href="#" class="menu-mob__link">Экскурсия</a></li>
+                <li class="menu-mob__item"><a href="#" class="menu-mob__link">Кредитование</a></li>
+                <li class="menu-mob__item"><a href="#" class="menu-mob__link">Выберите дизайн своего дома</a></li>
+                <li class="menu-mob__item"><a href="#" class="menu-mob__link">Новости</a></li>
+                <li class="menu-mob__item"><a href="#" class="menu-mob__link">Контакты</a></li>
+            </ul>
         </div>
     </div>
 </header>
 <main>
-    <section class="banner">
+    <!--<section class="banner">
         <div class="banner__wrapper">
             <div class="banner__image">
-                <div class="banner__image--left">
+                <div class="banner__image&#45;&#45;left">
                     <span><img src="img/main-banner-bg.png"></span>
                 </div>
-                <div class="banner__image--right"><img src="img/main/banner-main.jpg"></div>
+                <div class="banner__image&#45;&#45;right"><img src="img/main/banner-main.jpg"></div>
             </div>
             <div class="banner__information">
                 <div class="container">
@@ -130,14 +158,14 @@
                         <div class="banner__filter banner-filter">
 
                             <div class="banner-filter__wrapper">
-                                <div class="banner-filter--left">
+                                <div class="banner-filter&#45;&#45;left">
                                     <div id="slider-range" class="banner-filter__range"></div>
                                     <div class="banner-filter__labels">
                                         <div class="banner-filter__min"></div>
                                         <div class="banner-filter__max"></div>
                                     </div>
                                 </div>
-                                <div class="banner-filter--right">
+                                <div class="banner-filter&#45;&#45;right">
                                     <span>Найдено: 5 проектов</span>
                                     <svg width="39" height="24" viewBox="0 0 39 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0.410156 12.1688H36.001M36.001 12.1688L23.29 2M36.001 12.1688L23.29 22.3376" stroke="#FBB829" stroke-width="3"/>
@@ -149,7 +177,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <section class="building m150">
         <div class="container">
             <div class="h1-block building__title">
@@ -361,6 +389,12 @@
                             </div>
                         </div>
                     </div>
+                    <a href="#" class="sl-review__btn sl-review__btn_mob">
+                        Подробнее о кейсе
+                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="sl-review__btn-icon">
+                            <use xlink:href="img/sprites.svg?#arrow-up-bold"></use>
+                        </svg>
+                    </a>
                 </div>
                 <div class="swiper-slide portfolio__card card">
                     <div class="card__review sl-review">
@@ -402,6 +436,12 @@
                             </div>
                         </div>
                     </div>
+                    <a href="#" class="sl-review__btn sl-review__btn_mob">
+                        Подробнее о кейсе
+                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="sl-review__btn-icon">
+                            <use xlink:href="img/sprites.svg?#arrow-up-bold"></use>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
@@ -421,7 +461,7 @@
             <a href="#" class="portfolio__link btn-main-secondary">Смотреть все кейсы</a>
         </div>
     </section>
-    <section class="aboute m150">
+    <!--<section class="aboute m150">
         <div class="aboute__top aboute-top">
             <div class="container">
                 <div class="h1-block how-do-work__title">
@@ -454,7 +494,7 @@
                 <a href="#" class="btn-main-secondary aboute-bottom__btn">Подробнее</a>
             </div>
         </div>
-    </section>
+    </section>-->
     <section class="how-do-work m150">
         <div class="container">
             <div class="how-do-work__wrapper">
@@ -503,6 +543,7 @@
                     </div>
                 </div>
             </div>
+            <a href="#" class="btn-main-secondary how-do-work__btn how-do-work__btn_mob">Подробнее о технологии</a>
         </div>
     </section>
     <section class="advantages m150">
@@ -547,11 +588,11 @@
             </div>
         </div>
     </section>
-    <section class="tabs-form">
+    <!--<section class="tabs-form">
         <div class="form-tabs">
             <div class="container">
                 <div class="form-tabs__top form-tabs-top">
-                    <div class="form-tabs-top__item form-tabs-top__item--active">Записаться на экскурсию</div>
+                    <div class="form-tabs-top__item form-tabs-top__item&#45;&#45;active">Записаться на экскурсию</div>
                     <div class="form-tabs-top__item">Индивидуальное проектирование</div>
                     <div class="form-tabs-top__item">Получить консультацию</div>
                     <div class="form-tabs-top__item">Рассчитать стоимость</div>
@@ -695,7 +736,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <section class="look m150">
         <div class="container">
             <div class="look__wrapper">
@@ -712,9 +753,10 @@
                     <img src="img/main/look__right.jpg" alt="" class="look__slider-right">
                 </div>
             </div>
+            <a href="#" class="btn-main look__info-btn look__info-btn_mob">Узнать подробнее</a>
         </div>
     </section>
-    <section class="calculate m150">
+    <!--<section class="calculate m150">
         <div class="container">
             <div class="calculate__wrapper">
                 <div class="calculate__content calculate-content">
@@ -724,36 +766,36 @@
 
                     <div class="calculate-content__inner credit-calc">
                         <div class="credit-calc__tabs credit-calc-tabs">
-                            <div class="credit-calc-tabs__item credit-calc-tabs__item--active">Кредит для дачи</div>
+                            <div class="credit-calc-tabs__item credit-calc-tabs__item&#45;&#45;active">Кредит для дачи</div>
                             <div class="credit-calc-tabs__item">Кредит для дома</div>
                             <div class="credit-calc-tabs__item">Мат.капитал</div>
                             <div class="credit-calc-tabs__item">Трейд-ин</div>
                         </div>
                         <div class="credit-calc__content credit-calc-content">
-                            <div class="credit-calc-content__item credit-calc-content__item--active" data-index="0">
+                            <div class="credit-calc-content__item credit-calc-content__item&#45;&#45;active" data-index="0">
                                 <div class="credit-calc-content__tabs credit-calc-content-tabs">
-                                    <div class="credit-calc-content-tabs__item credit-calc-content-tabs__item--active">Почта Банк</div>
+                                    <div class="credit-calc-content-tabs__item credit-calc-content-tabs__item&#45;&#45;active">Почта Банк</div>
                                     <div class="credit-calc-content-tabs__item">Альфа Банк</div>
                                     <div class="credit-calc-content-tabs__item">Локо Банк</div>
                                     <div class="credit-calc-content-tabs__item">Европа Банк</div>
                                 </div>
                                 <div class="credit-calc-content__information credit-calc-content-info">
-                                    <div class="credit-calc-content-info__item credit-calc-content-info__item--active table-info" data-index="0">
+                                    <div class="credit-calc-content-info__item credit-calc-content-info__item&#45;&#45;active table-info" data-index="0">
                                         <div class="table-info__tr">
-                                            <div class="table-info__td table-info__td--left">Срок</div>
-                                            <div class="table-info__td table-info__td--right">до 5 лет</div>
+                                            <div class="table-info__td table-info__td&#45;&#45;left">Срок</div>
+                                            <div class="table-info__td table-info__td&#45;&#45;right">до 5 лет</div>
                                         </div>
                                         <div class="table-info__tr">
-                                            <div class="table-info__td table-info__td--left">Сумма кредита</div>
-                                            <div class="table-info__td table-info__td--right">Без залога: до 3 000 000 руб.</div>
+                                            <div class="table-info__td table-info__td&#45;&#45;left">Сумма кредита</div>
+                                            <div class="table-info__td table-info__td&#45;&#45;right">Без залога: до 3 000 000 руб.</div>
                                         </div>
                                         <div class="table-info__tr">
-                                            <div class="table-info__td table-info__td--left">Процентная ставка</div>
-                                            <div class="table-info__td table-info__td--right">4,9% + страхование первоначальный взнос 10%</div>
+                                            <div class="table-info__td table-info__td&#45;&#45;left">Процентная ставка</div>
+                                            <div class="table-info__td table-info__td&#45;&#45;right">4,9% + страхование первоначальный взнос 10%</div>
                                         </div>
 
                                         <div class="info-revert table-info__revert">
-                                            <div class="info-revert__name info-revert__name--active">
+                                            <div class="info-revert__name info-revert__name&#45;&#45;active">
                                                 Необходимые документы
                                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <rect x="8.30859" width="1.38462" height="18" fill="#303030"/>
@@ -782,14 +824,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="credit-calc-content-info__item" data-index="1"></div><!-- Альфа Банк -->
-                                    <div class="credit-calc-content-info__item" data-index="2"></div><!-- Локо Банк -->
-                                    <div class="credit-calc-content-info__item" data-index="3"></div><!-- Европа Банк -->
+                                    <div class="credit-calc-content-info__item" data-index="1"></div>&lt;!&ndash; Альфа Банк &ndash;&gt;
+                                    <div class="credit-calc-content-info__item" data-index="2"></div>&lt;!&ndash; Локо Банк &ndash;&gt;
+                                    <div class="credit-calc-content-info__item" data-index="3"></div>&lt;!&ndash; Европа Банк &ndash;&gt;
                                 </div>
                             </div>
-                            <div class="credit-calc-content__item" data-index="1"></div><!-- Кредит для дома -->
-                            <div class="credit-calc-content__item" data-index="2"></div><!-- Мат.капитал -->
-                            <div class="credit-calc-content__item" data-index="3"></div><!-- КТрейд-ин -->
+                            <div class="credit-calc-content__item" data-index="1"></div>&lt;!&ndash; Кредит для дома &ndash;&gt;
+                            <div class="credit-calc-content__item" data-index="2"></div>&lt;!&ndash; Мат.капитал &ndash;&gt;
+                            <div class="credit-calc-content__item" data-index="3"></div>&lt;!&ndash; КТрейд-ин &ndash;&gt;
                         </div>
                     </div>
                 </div>
@@ -805,13 +847,13 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <section class="helpful m150">
         <div class="container">
             <div class="helpful__row df-center-sb">
                 <div class="h1-block">
                     <span class="h1-block__line"></span>
-                    Популярные проекты
+                    Интересно и полезно
                 </div>
                 <div class="helpful__btn df-center">
                     <div class="swiper-button-prev helpful__btn-prev">
@@ -939,7 +981,7 @@
         </div>
     </section>
 </main>
-<footer class="footer">
+<!--<footer class="footer">
     <div class="container">
         <div class="footer__grid">
             <div class="footer__column footer-column">
@@ -947,7 +989,7 @@
                 <div class="footer-column__info"><span>ИНН:</span> 1660337884</div>
                 <div class="footer-column__info"><span>ОГРН:</span> 1191690092758</div>
                 <div class="footer-column__info"><span>КПП:</span> 166001001</div>
-                <div class="footer-column__info footer-column__info--last">*Информация носит справочный характер</div>
+                <div class="footer-column__info footer-column__info&#45;&#45;last">*Информация носит справочный характер</div>
             </div>
             <div class="footer__column footer-column">
                 <div class="footer-column__title">Контакты</div>
@@ -972,7 +1014,7 @@
             </div>
         </div>
     </div>
-</footer>
+</footer>-->
 <div class="fade"></div>
 <div class="modal-thanks" id="ModalThanks">
     <span class="h2 modal-thanks__title">Спасибо! Ваша заявка отправлена.</span>
