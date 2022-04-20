@@ -1958,9 +1958,7 @@ button:hover {
     &--active{
       svg{
         transform: rotate(45deg);
-        rect{
-          fill: #FBB829;
-        }
+        color: #FBB829;
       }
     }
   }
@@ -3390,6 +3388,9 @@ button:hover {
   line-height: 25px;
   color: #555555;
   margin-top: 40px;
+  &_mob{
+    display: none;
+  }
   &er{
     font-weight: 400;
     font-size: 18px;
@@ -3938,6 +3939,7 @@ button:hover {
   /* BANNER */
   .banner__filter{
     width: 100%;
+    box-shadow: 7px 2px 2px rgba(186, 186, 186, 0.25);
   }
   .banner-content__title {
     font-size: 33px;
@@ -4536,8 +4538,11 @@ button:hover {
     flex-direction: column;
   }
   .individual-wrapper {
-    &__image img {
-      width: 100%;
+    &__image {
+      margin: 25px 0 0;
+      img {
+        width: 100%;
+      }
     }
     &__btn {
       margin-top: 30px;
@@ -4606,6 +4611,8 @@ button:hover {
       padding-bottom: 85px;
       &__top{
         grid-template-columns: 1fr;
+        margin: 0 -10px;
+        width: ~"calc(100% + 20px)";
       }
       &__bottom{
         flex-direction: column;
@@ -4627,7 +4634,7 @@ button:hover {
   }
   .sale{
     flex-direction: column;
-    gap: 35px;
+    gap: 15px;
   }
 }
 @media (max-width: 767px) {
@@ -4931,7 +4938,7 @@ button:hover {
   }
   /* PAGE 404 */
   .error-page {
-    margin: 70px 0 0;
+    margin: 25px 0 0;
     position: relative;
     padding: 0 0 60px;
     &:after {
@@ -5152,9 +5159,20 @@ button:hover {
       }
     }
   }
-  .dop-block-texter {
-    font-size: 16px;
-    line-height: 19px;
+  .dop-block-text{
+    width: 100%;
+    display: none;
+    &_mob{
+      width: 100%;
+      text-align: center;
+      margin: 10px 0 0;
+      display: block;
+    }
+    &er{
+      font-size: 16px;
+      line-height: 19px;
+      margin: 0;
+    }
   }
   /* PORTFOLIO PAGE */
   .porfolio-arhive-page {
@@ -5440,6 +5458,8 @@ button:hover {
     }
     &__title{
       margin-bottom: 25px;
+      align-items: flex-start;
+      flex-flow: column-reverse;
     }
     &__cards{
       display: grid;
@@ -5648,6 +5668,8 @@ button:hover {
   .about-advantages{
     &__title{
       margin: 0 0 25px;
+      align-items: flex-start;
+      flex-flow: column-reverse;
     }
     &__cards{
       display: grid;
@@ -5994,6 +6016,15 @@ button:hover {
   .sale{
     &__title{
       margin: 0 0 25px;
+    }
+  }
+
+  .comlections{
+    &__title {
+      font-size: 21px;
+      line-height: 115%;
+      text-transform: uppercase;
+      margin-bottom: 15px;
     }
   }
 }
