@@ -4708,6 +4708,10 @@ button:hover {
       width: 100%;
     }
   }
+  .sale{
+    flex-direction: column;
+    gap: 35px;
+  }
 }
 @media (max-width: 767px) {
   .container {
@@ -5220,6 +5224,18 @@ button:hover {
   }
   .sale-wrapper__left{
     grid-template-columns: 1fr;
+  }
+
+  .sale{
+    .sale__right{
+      img{
+        width: 100%;
+      }
+    }
+  }
+  .dop-block-texter {
+    font-size: 16px;
+    line-height: 19px;
   }
 }
 @media (max-width: 580px) {
