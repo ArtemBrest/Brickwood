@@ -56,8 +56,8 @@ window.addEventListener("load", function () {
             }
         });
         MenuOverlay.addEventListener("click", function () {
-            if (HeaderMobBtn.classList.contains("active")) {
-                HeaderMobBtn.classList.remove("active");
+            if (HeaderMobBtn.classList.contains("menu__btn_active")) {
+                HeaderMobBtn.classList.remove("menu__btn_active");
                 fadeOut(MenuMob);
                 fadeOut(MenuOverlay)
             }
