@@ -2260,16 +2260,19 @@ button:hover {
 .product-page{
   margin: 40px 0 150px;
   &__tabs{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-top: 35px;
+    margin: 35px 0 0;
+    display: flex;
+    align-items: center;
+    overflow-y: auto;
+    padding: 0 10px 10px 0;
   }
   &__item{
     font-weight: 400;
     font-size: 18px;
     line-height: 140%;
     color: #303030;
-    height:60px;
+    min-width: 210px;
+    padding: 10px 30px;
     display: flex;
     align-items: center;
     border: 1px solid #D7D7D7;
@@ -2277,8 +2280,14 @@ button:hover {
     justify-content: center;
     cursor: pointer;
     border-right: none;
+    transition: all 0.2s;
     &:last-child{
       border-right: 1px solid #D7D7D7;
+    }
+    &_active,
+    &:hover{
+      background: @text-color-black;
+      color: #F9F9F9;
     }
   }
   &__cap{
@@ -3333,11 +3342,9 @@ button:hover {
   &__wrapper{
     display: flex;
     justify-content: space-between;
-    padding-top:25px;
   }
-  .h1-block{
-    flex-direction: column;
-    align-items: baseline;
+  &__title{
+    margin: 0 0 30px;
   }
   &-wrapper{
     &__right{
@@ -3719,8 +3726,6 @@ button:hover {
 /* ARHIVE PORTFOLIO PAGE */
 .porfolio-arhive-page{
   &__tabs{
-    max-width: 620px;
-    width: 100%;
     margin-bottom: 60px;
   }
   &__wrapper{
@@ -4126,9 +4131,18 @@ button:hover {
     }
   }
   .calculate {
+    &-form{
+      &__feedback{
+        padding: 20px 10px 0;
+      }
+      &__btn{
+        width: 100%;
+        margin: 0 0 30px;
+      }
+    }
     .calculate-form {
       &__feedback{
-        padding: 20px 10px 0px;
+        padding: 20px 10px 0;
       }
       &__title {
         font-size: 18px;
@@ -4552,10 +4566,29 @@ button:hover {
       font-size: 14px;
     }
   }
-  /* SERVICES BLOCK */
+  /* SECTION  SERVICES */
   .services{
     &__grid{
       grid-template-columns: repeat(2, 1fr);
+    }
+    &-grid-item{
+      &--active{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        min-height: 550px;
+        height: max-content;
+        z-index: 22;
+        padding: 20px 20px 70px;
+        .services-grid-item{
+          &__text{
+            max-width: 100%;
+            max-height: 350px;
+            overflow-y: auto;
+          }
+        }
+      }
     }
   }
   /* tabs-form */
@@ -5027,10 +5060,13 @@ button:hover {
     }
     .services-grid-item {
       height: auto;
-      max-width: 300px;
-      margin: 0 auto;
       width: 100%;
       min-height: 190px;
+      padding: 10px;
+      &--active{
+        position: relative;
+        padding: 10px 10px 30px;
+      }
       &.noBlockService {
         padding: 0px;
         min-height: auto;
@@ -5098,16 +5134,21 @@ button:hover {
       padding: 15px 10px;
     }
   }
-  .sale-wrapper__right {
-    width: 100%;
-  }
-  .sale-wrapper__left {
-    grid-template-columns: 1fr;
-  }
   .sale {
     .sale__right {
       img {
         width: 100%;
+      }
+    }
+    &-wrapper{
+      &__left {
+        grid-template-columns: 1fr;
+      }
+      &__right {
+        width: 100%;
+      }
+      &__item{
+        padding: 20px;
       }
     }
   }
@@ -5922,10 +5963,27 @@ button:hover {
     }
   }
   .product-page__tabs{
-    overflow: auto;
     padding: 0 0 10px;
+    margin: 25px 0 0;
     .product-page__item{
-      width: 206px;
+      min-width: 125px;
+      white-space: nowrap;
+      padding: 10px 5px;
+      font-size: 14px;
+      line-height: 100%;
+    }
+  }
+  .porfolio-arhive-page{
+    &__tabs{
+      margin: 0 0 25px;
+    }
+    .card__content{
+      padding: 10px 10px;
+    }
+    .card__text {
+      max-width: 50%;
+      width: 100%;
+      text-align: right;
     }
   }
   .portfolio-list{
@@ -5933,12 +5991,14 @@ button:hover {
       grid-template-columns: 1fr;
     }
   }
+  .sale{
+    &__title{
+      margin: 0 0 25px;
+    }
+  }
 }
 @media (max-width: 479px) {
   .container {
-    width: 100%;
-  }
-  .banner-form{
     width: 100%;
   }
   .modal_thanks {
@@ -5963,9 +6023,8 @@ button:hover {
       }
     }
   }
-  .services .services-grid-item{
+  .banner-form{
     width: 100%;
-    max-width: 100%;
   }
   .aboute {
     .aboute-bottom__btn {
