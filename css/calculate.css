@@ -19,6 +19,12 @@
   line-height: 14px;
   color: #868686;
 }
+.selecter .selecter-item {
+  display: none;
+}
+.selecter .selecter-item.active {
+  display: block;
+}
 .selecter .selecter-item__title {
   font-weight: 500;
   font-size: 20px;
@@ -68,4 +74,64 @@
 }
 .selecter .selecter-item__middle {
   margin: 0px 15px;
+}
+.complections__price {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 113%;
+  color: #303030;
+  margin-top: 25px;
+}
+.complections__subtext {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  margin-top: 5px;
+  color: #868686;
+}
+/* ABOUTE PRICE */
+.aboute-price__wrapper {
+  display: flex;
+  gap: 125px;
+}
+.aboute-price__right {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: #555555;
+  max-width: 735px;
+  width: 100%;
+}
+.aboute-price__superTitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #303030;
+  margin: 25px 0px;
+}
+.aboute-price .aboute-price-grid {
+  display: grid;
+  grid-gap: 27px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.aboute-price .aboute-price-grid__item {
+  display: flex;
+  gap: 15px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: #555555;
+}
+.aboute-price .aboute-price-grid_first {
+  border-top: 1px solid #868686;
+  padding-top: 20px;
+}
+.aboute-price .aboute-price-grid_last {
+  border-bottom: 1px solid #868686;
+  padding-bottom: 20px;
+}
+.aboute-price .aboute-price-grid_last .aboute-price-grid__item {
+  border-top: 1px solid #868686;
+  margin-top: 20px;
+  padding-top: 20px;
 }
