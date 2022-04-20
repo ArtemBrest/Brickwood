@@ -135,3 +135,37 @@
   margin-top: 20px;
   padding-top: 20px;
 }
+@media (max-width: 1235px) {
+  .price-wrapper__image img {
+    width: 100%;
+  }
+}
+@media (max-width: 991px) {
+  .price-home__wrapper {
+    grid-template-columns: 1fr;
+    grid-gap: 50px;
+    border: none;
+  }
+  .aboute-price__wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .aboute-price__right {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .aboute-price .aboute-price-grid {
+    grid-template-columns: 1fr;
+  }
+  .aboute-price .aboute-price-grid__item {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .aboute-price .aboute-price-grid_last .aboute-price-grid__item {
+    border: none;
+  }
+  .aboute-price .aboute-price-grid_last .aboute-price-grid__item {
+    margin: 0px;
+    padding: 0px;
+  }
+}
