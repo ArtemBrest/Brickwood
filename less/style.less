@@ -4245,12 +4245,19 @@ button:hover {
 
   .calculate {
     .calculate-form {
+      &__feedback{
+        padding: 20px 10px 0px;
+      }
       &__title {
         font-size: 18px;
       }
 
       &__text {
         font-size: 14px;
+      }
+      &__btn{
+        width: 100%;
+        margin: 0 0 30px;
       }
     }
   }
@@ -4672,6 +4679,14 @@ button:hover {
       width: 100%;
       margin: 0 0 30px;
     }
+    &__btn{
+      &-prev{
+        left: -10px;
+      }
+      &-next{
+        right: -10px;
+      }
+    }
   }
 
 
@@ -4683,6 +4698,7 @@ button:hover {
 
     .calculate__form {
       width: 100%;
+      padding: 25px 0 40px;
     }
   }
 
@@ -4907,7 +4923,6 @@ button:hover {
 
   .m150 {
     margin: 70px 0;
-
     &_first {
       margin: 25px 0 70px;
     }
@@ -4918,8 +4933,6 @@ button:hover {
   }
 
   .cms-description-text {
-    color: #555555;
-
     & > p {
       font-weight: 400;
       font-size: 14px;
@@ -4972,21 +4985,11 @@ button:hover {
       font-weight: 400;
       font-size: 14px;
       line-height: 125%;
-      color: inherit;
       margin: 0 0 10px;
-
       &:last-child {
         margin: 0;
       }
-
       &:before {
-        content: "";
-        flex-shrink: 0;
-        display: block;
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: @text-color-black;
         margin: 5px 0 0;
       }
     }
@@ -5324,7 +5327,7 @@ button:hover {
 
     .credit-calc-tabs {
       overflow: auto;
-
+      padding: 0 0 10px;
       &__item {
         width: 155px;
       }
@@ -5332,6 +5335,7 @@ button:hover {
 
     .credit-calc-content-tabs {
       overflow: auto;
+      padding: 0 0 10px;
 
       &__item {
         min-width: 130px;
@@ -5397,6 +5401,17 @@ button:hover {
 
   /* ABOUTE */
   .aboute {
+    &_other{
+      margin: 0 0 70px;
+      .aboute-top {
+        padding: 25px 0 15px;
+      }
+    }
+    &_excursion{
+      .aboute-bottom__image {
+        margin: 0!important;
+      }
+    }
     .aboute-top__text {
       font-size: 14px;
       line-height: 17px;
@@ -6237,6 +6252,7 @@ button:hover {
       &-prev{
         opacity: 1;
         top: 115px;
+
       }
     }
     &__title{
@@ -6280,6 +6296,7 @@ button:hover {
 
   .product-page__tabs{
     overflow: auto;
+    padding: 0 0 10px;
     .product-page__item{
       width: 206px;
     }
