@@ -128,7 +128,6 @@
     </div>
 </header>
 <main>
-
     <section class="calculate m150">
         <div class="container">
             <div class="calculate__wrapper">
@@ -171,8 +170,7 @@
                                             <div class="info-revert__name info-revert__name--active">
                                                 Необходимые документы
                                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="8.30859" width="1.38462" height="18" fill="#303030"/>
-                                                    <rect y="9.69238" width="1.38462" height="18" transform="rotate(-90 0 9.69238)" fill="#303030"/>
+                                                    <use xlink:href="img/sprites.svg#plus-icon"></use>
                                                 </svg>
                                             </div>
                                             <div class="info-revert__caption info-revert-caption" style="display: block">
@@ -186,8 +184,7 @@
                                             <div class="info-revert__name">
                                                 Минимальные документы
                                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="8.30859" width="1.38462" height="18" fill="#303030"/>
-                                                    <rect y="9.69238" width="1.38462" height="18" transform="rotate(-90 0 9.69238)" fill="#303030"/>
+                                                    <use xlink:href="img/sprites.svg#plus-icon"></use>
                                                 </svg>
                                             </div>
                                             <div class="info-revert__caption info-revert-caption">
@@ -221,7 +218,6 @@
             </div>
         </div>
     </section>
-    
     <section class="faq m150">
         <div class="container">
             <div class="h1-block faq__title">
@@ -276,7 +272,6 @@
             </div>
         </div>
     </section>
-
     <section class="map m150">
         <div class="container">
             <div class="h1-block map__title">
@@ -290,69 +285,69 @@
         </div>
     </section>
 </main>
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__grid">
-                <div class="footer__column footer-column">
-                    <img src="img/logo.png" class="logo">
-                    <div class="footer-column__info"><span>ИНН:</span> 1660337884</div>
-                    <div class="footer-column__info"><span>ОГРН:</span> 1191690092758</div>
-                    <div class="footer-column__info"><span>КПП:</span> 166001001</div>
-                    <div class="footer-column__info footer-column__info&#45;&#45;last">*Информация носит справочный характер</div>
-                </div>
-                <div class="footer__column footer-column">
-                    <div class="footer-column__title">Контакты</div>
-                    <div class="footer-column__info"><strong>Телефон:</strong> +7 (843) 245-29-45</div>
-                    <div class="footer-column__info"><strong>Email:</strong> brickwood-kzn@yandex.ru</div>
-                    <div class="socials">
-                        <a href="#" class="socials__item"><img src="img/svg/vk.svg"></a>
-                        <a href="#" class="socials__item"><img src="img/svg/whatsapp.svg"></a>
-                    </div>
-                </div>
-                <div class="footer__column footer-column">
-                    <div class="footer-column__title">Адрес</div>
-                    <div class="footer-column__info">г. Казань, ул Маяковского, 4, офис 17</div>
-                    <div class="footer-column__info">пн-пт 9:00–18:00</div>
-                    <div class="footer-column__info">сб 09:00–15:00</div>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__grid">
+            <div class="footer__column footer-column">
+                <img src="img/logo.png" class="logo">
+                <div class="footer-column__info"><span>ИНН:</span> 1660337884</div>
+                <div class="footer-column__info"><span>ОГРН:</span> 1191690092758</div>
+                <div class="footer-column__info"><span>КПП:</span> 166001001</div>
+                <div class="footer-column__info footer-column__info&#45;&#45;last">*Информация носит справочный характер</div>
+            </div>
+            <div class="footer__column footer-column">
+                <div class="footer-column__title">Контакты</div>
+                <div class="footer-column__info"><strong>Телефон:</strong> +7 (843) 245-29-45</div>
+                <div class="footer-column__info"><strong>Email:</strong> brickwood-kzn@yandex.ru</div>
+                <div class="socials">
+                    <a href="#" class="socials__item"><img src="img/svg/vk.svg"></a>
+                    <a href="#" class="socials__item"><img src="img/svg/whatsapp.svg"></a>
                 </div>
             </div>
-            <div class="footer__bottom copyright">
-                <div class="copyright__left">© 2021. Brickwood. Все права защищены.</div>
-                <div class="copyright__right">
-                    <a href="#">Политика конфиденциальности</a>
-                </div>
+            <div class="footer__column footer-column">
+                <div class="footer-column__title">Адрес</div>
+                <div class="footer-column__info">г. Казань, ул Маяковского, 4, офис 17</div>
+                <div class="footer-column__info">пн-пт 9:00–18:00</div>
+                <div class="footer-column__info">сб 09:00–15:00</div>
             </div>
         </div>
-    </footer>
-    <div class="fade"></div>
-    <div class="modal-thanks" id="ModalThanks">
-        <span class="h2 modal-thanks__title">Спасибо! Ваша заявка отправлена.</span>
-    </div>
-    <div class="modal" id="modal">
-    <span class="modal__close">
-        <svg class="modal__close-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="img/sprites.svg#plus-icon"></use>
-        </svg>
-    </span>
-        <form class="modal__form">
-            <span class="h2 modal__title">Заказать звонок</span>
-            <div class="modal__group">
-                <input type="text" class="modal__form-input" name="name" placeholder="Имя">
-                <input type="text" class="modal__form-input" name="phone" placeholder="Телефон">
+        <div class="footer__bottom copyright">
+            <div class="copyright__left">© 2021. Brickwood. Все права защищены.</div>
+            <div class="copyright__right">
+                <a href="#">Политика конфиденциальности</a>
             </div>
-            <button class="modal__form-btn btn-main">Отправить</button>
-        </form>
+        </div>
     </div>
-    <button class="up" aria-label="up">
-        <svg width="30" height="17" viewBox="0 0 47 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4 24L23.7826 7L43 24" stroke="white" stroke-width="7"></path>
-        </svg>
-    </button>
-    <script src="lightGallery-master/dist/lightgallery.min.js"></script>
-    <script src="lightGallery-master/dist/plugins/video/lg-video.min.js"></script>
-    <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/cocoen.js"></script>
-    <script src="js/skroll.min.js"></script>
-    <script src="js/script.js"></script>
+</footer>
+<div class="fade"></div>
+<div class="modal-thanks" id="ModalThanks">
+    <span class="h2 modal-thanks__title">Спасибо! Ваша заявка отправлена.</span>
+</div>
+<div class="modal" id="modal">
+<span class="modal__close">
+    <svg class="modal__close-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <use xlink:href="img/sprites.svg#plus-icon"></use>
+    </svg>
+</span>
+    <form class="modal__form">
+        <span class="h2 modal__title">Заказать звонок</span>
+        <div class="modal__group">
+            <input type="text" class="modal__form-input" name="name" placeholder="Имя">
+            <input type="text" class="modal__form-input" name="phone" placeholder="Телефон">
+        </div>
+        <button class="modal__form-btn btn-main">Отправить</button>
+    </form>
+</div>
+<button class="up" aria-label="up">
+    <svg width="30" height="17" viewBox="0 0 47 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 24L23.7826 7L43 24" stroke="white" stroke-width="7"></path>
+    </svg>
+</button>
+<script src="lightGallery-master/dist/lightgallery.min.js"></script>
+<script src="lightGallery-master/dist/plugins/video/lg-video.min.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/cocoen.js"></script>
+<script src="js/skroll.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
