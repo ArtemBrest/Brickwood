@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="lightGallery-master/dist/css/lg-video.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/calculate.css">
+
+    <script src="js/jquery.min.js"></script>
 </head>
 <body>
 <div class="menu-overlay"></div>
@@ -128,7 +131,70 @@
     </div>
 </header>
 <main>
+    <section class="price-home">
+        <div class="container">
+            <div class="price-home__wrapper price-wrapper">
+                <div class="price-wrapper__option">
+                    <div class="h1-block">Рассчитаем<br>стоимость вашего<br>будущего дома</div>
+                    <div class="calculate-content__hr"></div>
+                    <div class="price-home__select selecter">
+                        <div class="selecter__item selecter-item">
+                            <div class="selecter-item__title">1.Какой объект вам интересен?</div>
+                            <div class="selecter-item__block">
+                                <input type="radio" id="object1" name="object" class="selecter-item__input selecter-item__input--radio">
+                                <label for="object1" class="selecter-item__label">Загородные дома</label>
+                            </div>
+                            <div class="selecter-item__block">
+                                <input type="radio" id="object2" name="object" class="selecter-item__input selecter-item__input--radio">
+                                <label for="object2" class="selecter-item__label">Каркасные дачи</label>
+                            </div>
+                            <div class="selecter-item__block">
+                                <input type="radio" id="object3" name="object" class="selecter-item__input selecter-item__input--radio">
+                                <label for="object3" class="selecter-item__label">Каркасные бани</label>
+                            </div>
+                        </div>
+                        <div class="selecter__item">
+                            <div class="selecter-item__title">2. Укажите размер дома, м2</div>
+                            <input class="selecter-item__input selecter-item__input--text" placeholder="6" name="width-home">
+                            <span class="selecter-item__middle">
+                                <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.9875 9C0.902167 9 0.822167 8.968 0.7475 8.904C0.6835 8.84 0.6515 8.76 0.6515 8.664C0.6515 8.632 0.656833 8.59467 0.6675 8.552C0.688833 8.49867 0.720833 8.44 0.7635 8.376L3.5475 4.744L0.9395 1.304C0.896833 1.24 0.864833 1.18667 0.8435 1.144C0.832833 1.10133 0.8275 1.05867 0.8275 1.016C0.8275 0.92 0.8595 0.84 0.9235 0.776C0.9875 0.712 1.0675 0.679999 1.1635 0.679999H1.9795C2.09683 0.679999 2.18217 0.712 2.2355 0.776C2.2995 0.829333 2.35283 0.882667 2.3955 0.936L4.5235 3.704L6.6515 0.952C6.69417 0.898666 6.74217 0.84 6.7955 0.776C6.8595 0.712 6.95017 0.679999 7.0675 0.679999H7.8515C7.9475 0.679999 8.0275 0.712 8.0915 0.776C8.1555 0.84 8.1875 0.92 8.1875 1.016C8.1875 1.05867 8.17683 1.10133 8.1555 1.144C8.14483 1.18667 8.11817 1.24 8.0755 1.304L5.4355 4.776L8.2195 8.376C8.26217 8.44 8.28883 8.49333 8.2995 8.536C8.32083 8.57867 8.3315 8.62133 8.3315 8.664C8.3315 8.76 8.2995 8.84 8.2355 8.904C8.1715 8.968 8.0915 9 7.9955 9H7.1475C7.04083 9 6.9555 8.97333 6.8915 8.92C6.8275 8.86667 6.77417 8.81333 6.7315 8.76L4.4755 5.832L2.2195 8.76C2.17683 8.80267 2.1235 8.856 2.0595 8.92C2.00617 8.97333 1.92083 9 1.8035 9H0.9875Z" fill="#868686"/>
+                                </svg>
+                            </span>
+                            <input class="selecter-item__input selecter-item__input--text" placeholder="6" class="height-home">
+                        </div>
+                        <div class="selecter__item selecter-item">
+                            <div class="selecter-item__title">3. Количество этажей</div>
+                            <div class="selecter-item__block">
+                                <input type="radio" id="object1" name="object" class="selecter-item__input selecter-item__input--radio">
+                                <label for="object1" class="selecter-item__label">1 этаж</label>
+                            </div>
+                            <div class="selecter-item__block">
+                                <input type="radio" id="object2" name="object" class="selecter-item__input selecter-item__input--radio">
+                                <label for="object2" class="selecter-item__label">1,5 этажа</label>
+                            </div>
+                            <div class="selecter-item__block">
+                                <input type="radio" id="object3" name="object" class="selecter-item__input selecter-item__input--radio">
+                                <label for="object3" class="selecter-item__label">3 этажа</label>
+                            </div>
+                        </div>
+                        <div class="selecter__item selecter-item">
 
+                        </div>
+                        <div class="selecter__paginations">
+                            <span>1</span>
+                            <span>/</span>
+                            <span>3</span>
+                        </div>
+                        <div class="btn-main selecter__btn">Продолжить</div>
+                    </div>
+                </div>
+                <div class="price-wrapper__image">
+                    <img src="img/calculate-image.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="calculate m150">
         <div class="container">
             <div class="calculate__wrapper">
