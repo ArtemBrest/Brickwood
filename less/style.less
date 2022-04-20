@@ -4718,18 +4718,21 @@ button:hover {
     width: 100%;
     padding: 0 10px;
   }
-  .h1-banner{
+
+  .h1-banner {
     font-weight: 400;
     font-size: 30px;
     line-height: 110%;
     text-transform: uppercase;
     color: #F8F8F8;
-    &_smal{
+
+    &_smal {
       font-size: 26px;
       line-height: 120%;
     }
   }
-  .h1-block{
+
+  .h1-block {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -4738,73 +4741,88 @@ button:hover {
     line-height: 115%;
     text-transform: uppercase;
     color: @text-color-black;
-    &_column{
+
+    &_column {
       flex-flow: column-reverse;
       align-items: flex-start;
     }
-    &__line{
+
+    &__line {
       display: block;
       width: 35px;
       height: 3px;
       background: @text-color-black;
     }
   }
-  .h2{
+
+  .h2 {
     font-weight: 400;
     font-size: 18px;
     line-height: 120%;
     color: #000000;
   }
-  .m150{
+
+  .m150 {
     margin: 70px 0;
-    &_first{
+
+    &_first {
       margin: 25px 0 70px;
     }
   }
-  .m30{
+
+  .m30 {
     margin: 30px 0;
   }
-  .cms-description-text{
+
+  .cms-description-text {
     color: #555555;
-    & > p{
+
+    & > p {
       font-weight: 400;
       font-size: 14px;
       line-height: 125%;
       color: inherit;
       margin: 0 0 10px;
-      &:last-child{
+
+      &:last-child {
         margin: 0;
       }
     }
-    & blockquote{
+
+    & blockquote {
       margin: 15px 0;
       padding: 15px 0;
       font-weight: 400;
       font-size: 14px;
       line-height: 130%;
     }
-    & > h2{
+
+    & > h2 {
       font-size: 16px;
       line-height: 115%;
       margin: 0 0 10px;
     }
-    & > h3{
+
+    & > h3 {
       font-weight: 400;
       font-size: 16px;
       line-height: 120%;
       margin: 0 0 10px;
     }
-    & h4{
+
+    & h4 {
       font-weight: 500;
       font-size: 16px;
       line-height: 120%;
       margin: 0 0 10px;
     }
-    & > ul{
+
+    & > ul {
       margin: 10px 0;
       padding: 0;
     }
-    & > ul > li{
+
+    & > ul > li {
       display: flex;
       gap: 5px;
       position: relative;
@@ -4813,10 +4831,12 @@ button:hover {
       line-height: 125%;
       color: inherit;
       margin: 0 0 10px;
-      &:last-child{
+
+      &:last-child {
         margin: 0;
       }
-      &:before{
+
+      &:before {
         content: "";
         flex-shrink: 0;
         display: block;
@@ -4828,33 +4848,39 @@ button:hover {
       }
     }
   }
-  .header{
-    &__logo{
-      &-image{
+
+  .header {
+    &__logo {
+      &-image {
         max-height: 70px;
         object-fit: cover;
       }
     }
-    &__phone{
+
+    &__phone {
       gap: 5px;
       margin: 0 10px 0 0;
-      &-icon{
+
+      &-icon {
         display: block;
         width: 13px;
         height: 13px;
         object-fit: cover;
       }
-      &-link{
+
+      &-link {
         font-weight: 400;
         font-size: 14px;
         line-height: 14px;
         color: @text-color-black;
-        &:hover{
+
+        &:hover {
           color: @main-color;
         }
       }
     }
-    &__btn{
+
+    &__btn {
       padding: 0 0 3px 0;
       background: transparent;
       border: none;
@@ -4864,7 +4890,8 @@ button:hover {
       color: #868686;
       gap: 5px;
       border-bottom: 1px solid #868686;
-      &-icon{
+
+      &-icon {
         display: block;
         color: @main-color;
       }
@@ -4872,26 +4899,29 @@ button:hover {
   }
 
   /* SECTION PROJECT */
-  .project{
-    &-other{
-      &__swiper{
-        .swiper-wrapper{
+  .project {
+    &-other {
+      &__swiper {
+        .swiper-wrapper {
           margin: 0 0 0 10px;
         }
       }
     }
-    &__card{
+
+    &__card {
       width: 380px;
     }
   }
+
   /* SECTION PORTFOLIO */
-  .portfolio{
-    &__card{
+  .portfolio {
+    &__card {
       display: flex;
       width: ~"calc(100% - 20px)";
     }
-    .card{
-      &__wrapper{
+
+    .card {
+      &__wrapper {
         position: relative;
         overflow: hidden;
         max-height: 390px;
@@ -4903,18 +4933,22 @@ button:hover {
       }
     }
   }
+
   /* SECTION HELPFULL */
-  .helpful{
-    &__swiper{
-      .swiper-wrapper{
+  .helpful {
+    &__swiper {
+      .swiper-wrapper {
         margin: 0 0 0 10px;
       }
     }
-    &__card{
+
+    &__card {
       width: 320px;
-      .card{
+
+      .card {
         &__top {
           height: 320px;
+
           &-img {
             height: 100%;
           }
@@ -4925,25 +4959,28 @@ button:hover {
 
 
   /* PAGE SINGLE PRODUCT */
-  .single-product{
-    &__swiper{
-      &-main{
+  .single-product {
+    &__swiper {
+      &-main {
         height: 510px;
       }
-      &-sub{
+
+      &-sub {
         height: 100px;
         margin: 0;
       }
     }
-    &__btn{
+
+    &__btn {
       &-next,
-      &-prev{
+      &-prev {
         position: absolute;
         top: 210px;
         opacity: 1;
       }
     }
-    &__box{
+
+    &__box {
       display: flex;
       flex-flow: column;
       align-items: center;
@@ -4951,55 +4988,64 @@ button:hover {
       border-right: 1px solid #D7D7D7;
       padding: 15px 10px;
     }
-    &__tabs{
-      .tab{
-        &-gallery{
+
+    &__tabs {
+      .tab {
+        &-gallery {
           display: grid;
-          grid-template-columns: repeat(2,1fr);
+          grid-template-columns: repeat(2, 1fr);
           grid-gap: 15px;
         }
       }
     }
   }
+
   /* SECTION ABOUT ADVANTAGES */
-  .about-advantages{
-    &__cards{
+  .about-advantages {
+    &__cards {
       display: grid;
       grid-template-columns: 1fr;
       grid-gap: 30px;
     }
   }
+
   /* SECTION TEAM */
-  .team{
-    &__swiper{
-      .swiper-wrapper{
+  .team {
+    &__swiper {
+      .swiper-wrapper {
         margin: 0 0 0 10px;
       }
     }
-    &__card{
+
+    &__card {
       width: 320px;
     }
   }
+
   /* NEWS PAGE */
-  .news{
-    &__tabs{
+  .news {
+    &__tabs {
       gap: 15px;
       margin: 0 0 20px;
       padding: 0 0 10px;
       overflow-x: auto;
     }
-    &__item{
+
+    &__item {
       white-space: nowrap;
     }
-    &__cards{
-      .card{
+
+    &__cards {
+      .card {
         display: flex;
         flex-flow: column-reverse;
         gap: 30px;
-        &__left{
+
+        &__left {
           width: 100%;
           min-width: 100%;
-          &-img{
+
+          &-img {
             width: 100%;
             height: auto;
             min-height: 130px;
@@ -5010,21 +5056,25 @@ button:hover {
       }
     }
   }
+
   /* PAGE CONTACT */
-  .contact{
+  .contact {
     margin: 25px 0 70px;
-    &__wrapper{
+
+    &__wrapper {
       display: grid;
       grid-template-columns: 1fr;
       grid-gap: 25px;
     }
   }
+
   /* PAGE 404 */
-  .error-page{
+  .error-page {
     margin: 70px 0 0;
     position: relative;
     padding: 0 0 60px;
-    &:after{
+
+    &:after {
       content: "";
       position: absolute;
       left: 0;
@@ -5036,14 +5086,17 @@ button:hover {
       height: 20px;
       width: 100%;
     }
-    &__wrapper{
+
+    &__wrapper {
       flex-flow: column;
       align-items: center;
     }
-    &__title{
+
+    &__title {
       margin: 0 0 20px;
     }
-    &__img{
+
+    &__img {
       display: block;
       flex-shrink: initial;
       max-width: 50%;
@@ -5051,9 +5104,11 @@ button:hover {
       height: auto;
       margin: 0 auto 25px;
     }
-    &__btn{
+
+    &__btn {
       display: none;
-      &_mob{
+
+      &_mob {
         display: flex;
         width: 100%;
       }
@@ -5064,35 +5119,42 @@ button:hover {
     &__img {
       display: none;
     }
+
     &__mob {
       display: block;
-      & .technology-banner__img{
+
+      & .technology-banner__img {
         display: block;
       }
     }
   }
 
-  .footer{
+  .footer {
     padding-top: 0px;
-    .logo--mobile{
-      display:block;
+
+    .logo--mobile {
+      display: block;
       width: 150px;
       left: -11px !important;
       margin-bottom: -20px;
     }
-    &__grid{
+
+    &__grid {
       grid-template-columns: 1fr;
     }
-    &__column{
-      img.logo:not(.logo--mobile){
+
+    &__column {
+      img.logo:not(.logo--mobile) {
         display: none;
       }
-      &:first-child{
-       order: 3;
+
+      &:first-child {
+        order: 3;
       }
     }
   }
-  .copyright{
+
+  .copyright {
     flex-direction: column;
     justify-content: left;
     align-items: baseline;
@@ -5101,74 +5163,89 @@ button:hover {
   }
 
 
-  .calculate{
-    .h1-block{
+  .calculate {
+    .h1-block {
       max-width: 300px;
     }
-    .calculate-content{
-      &__inner{
+
+    .calculate-content {
+      &__inner {
         margin-top: 15px;
       }
-      &__text{
+
+      &__text {
         font-size: 14px;
         line-height: 20px;
       }
     }
-    .credit-calc-tabs{
+
+    .credit-calc-tabs {
       overflow: auto;
-      &__item{
+
+      &__item {
         width: 155px;
       }
     }
-    .credit-calc-content-tabs{
+
+    .credit-calc-content-tabs {
       overflow: auto;
-      &__item{
+
+      &__item {
         min-width: 130px;
         text-align: center;
       }
     }
   }
-  .table-info{
-    &__td--left{
-      font-size:14px;
+
+  .table-info {
+    &__td--left {
+      font-size: 14px;
     }
-    &__td--right{
-      font-size:14px;
+
+    &__td--right {
+      font-size: 14px;
       text-align: right;
     }
   }
-  .info-revert__name{
-    &__name{
+
+  .info-revert__name {
+    &__name {
       font-size: 16px;
     }
-    &__item{
-      font-size:14px;
+
+    &__item {
+      font-size: 14px;
     }
   }
 
   /* SERVICES BLOCK */
-  .services{
+  .services {
     &__grid {
       grid-template-columns: 1fr;
     }
-    .services-grid-item{
+
+    .services-grid-item {
       height: auto;
       max-width: 300px;
       margin: 0 auto;
       width: 100%;
       min-height: 190px;
-      &.noBlockService{
+
+      &.noBlockService {
         padding: 0px;
         min-height: auto;
       }
-      &__image img{
+
+      &__image img {
         width: 80px;
       }
-      &__title{
+
+      &__title {
         font-size: 16px;
         line-height: 19px;
       }
-      &__text{
+
+      &__text {
         font-size: 14px;
         line-height: 17px;
       }
@@ -5176,42 +5253,46 @@ button:hover {
   }
 
   /* ABOUTE */
-  .aboute{
-    .aboute-top__text{
+  .aboute {
+    .aboute-top__text {
       font-size: 14px;
       line-height: 17px;
     }
 
-    .aboute-bottom__image{
+    .aboute-bottom__image {
       display: block;
       margin-top: 20px;
-      img{
+
+      img {
         width: 100%;
       }
     }
 
-    .aboute-bottom-circle{
-      &__item{
+    .aboute-bottom-circle {
+      &__item {
         width: 110px;
         height: 110px;
       }
+
       &__title {
         font-size: 22px;
         line-height: 26px;
       }
+
       &__text {
         font-size: 12px;
         line-height: 12px;
       }
+
       &__item:not(:last-child) {
         margin-right: -10px;
       }
     }
 
-    .aboute-bottom__btn{
+    .aboute-bottom__btn {
       max-width: 360px;
       width: 100%;
-      margin:30px auto 0px;
+      margin: 30px auto 0px;
     }
 
     &__top {
@@ -5222,20 +5303,35 @@ button:hover {
   .sale-wrapper__right {
     width: 100%;
   }
-  .sale-wrapper__left{
+
+  .sale-wrapper__left {
     grid-template-columns: 1fr;
   }
 
-  .sale{
-    .sale__right{
-      img{
+  .sale {
+    .sale__right {
+      img {
         width: 100%;
       }
     }
   }
+
   .dop-block-texter {
     font-size: 16px;
     line-height: 19px;
+  }
+
+  /* PORTFOLIO PAGE */
+  .porfolio-arhive-page {
+    .project {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .portfolio-arhive-page__wrapper{
+    .project__card {
+      width: 100%;
+    }
   }
 }
 @media (max-width: 580px) {
@@ -6036,6 +6132,13 @@ button:hover {
           }
         }
       }
+    }
+  }
+
+  .product-page__tabs{
+    overflow: auto;
+    .product-page__item{
+      width: 206px;
     }
   }
 }
