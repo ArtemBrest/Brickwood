@@ -4266,6 +4266,46 @@ button:hover {
       width: 100%;
     }
   }
+  .portfolio-list{
+    &__wrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .portfolio-review{
+    &__wrapper {
+      grid-template-columns: 1fr;
+    }
+    &__column--right{
+      img{
+
+        max-width: 500px;
+        width: 100%;
+      }
+    }
+    &__text{
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+  .comlections{
+    &__wrapper--right{
+      display: none;
+    }
+    &__tr{
+      flex-direction: column;
+      align-items: baseline;
+      gap: 3px;
+    }
+    &__td:first-child{
+      font-size:14px;
+      line-height: 17px;
+    }
+    &__td:last-child{
+      text-align: left;
+      font-size:14px;
+      line-height: 17px;
+    }
+  }
 }
 @media (max-width: 991px) {
   .container {
@@ -6139,6 +6179,11 @@ button:hover {
     overflow: auto;
     .product-page__item{
       width: 206px;
+    }
+  }
+  .portfolio-list{
+    &__wrapper{
+      grid-template-columns: 1fr;
     }
   }
 }
