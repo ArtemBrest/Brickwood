@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="lightGallery-master/dist/css/lg-video.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/calculate.css">
 
     <link rel="stylesheet" href="js/jquery-ui.css">
     <script src="js/jquery.min.js"></script>
@@ -144,6 +145,20 @@
                         <div class="banner__content banner-content">
                             <div class="banner-content__title banner-content__title--middle">Построим теплый каркасный дом для круглогодичного проживания</div>
                             <div class="banner-content__text banner-content__text--middle">Со всеми инженерными коммуникациями за 3 месяца в Казани и РТ с соблюдением "Скандинавской" технологии.</div>
+                            <div class="banner-content__icons">
+                                <div class="banner-content__item">
+                                    <img src="img/engineering.png">
+                                    Скандинавская технология
+                                </div>
+                                <div class="banner-content__item">
+                                    <img src="img/project_2.png">
+                                    Современные проекты
+                                </div>
+                                <div class="banner-content__item">
+                                    <img src="img/home_1.png">
+                                    Продуманные дома
+                                </div>
+                            </div>
                             <a href="#" class="btn-main banner__btnlink">Получить консультацию</a>
                         </div>
                     </div>
@@ -550,6 +565,123 @@
             </div>
         </div>
     </div>
+
+
+    <section class="price-home m150">
+        <div class="container">
+            <div class="price-home__wrapper price-wrapper">
+                <div class="price-wrapper__option">
+                    <div class="h1-block">Рассчитаем<br>стоимость вашего<br>будущего дома</div>
+                    <div class="calculate-content__hr"></div>
+                    <div class="price-home__select selecter">
+                        <div data-step="1" class="selecter__item selecter-item active">
+                            <div class="selecter-item__title">1.Какой объект вам интересен?</div>
+                            <div class="selecter-item__block">
+                                <input type="radio" id="object1" name="object" class="selecter-item__input selecter-item__input--radio">
+                                <label for="object1" class="selecter-item__label">Загородные дома</label>
+                            </div>
+                            <div class="selecter-item__block">
+                                <input type="radio" id="object2" name="object" class="selecter-item__input selecter-item__input--radio">
+                                <label for="object2" class="selecter-item__label">Каркасные дачи</label>
+                            </div>
+                            <div class="selecter-item__block">
+                                <input type="radio" id="object3" name="object" class="selecter-item__input selecter-item__input--radio">
+                                <label for="object3" class="selecter-item__label">Каркасные бани</label>
+                            </div>
+                        </div>
+                        <div data-step="2" class="selecter__item selecter-item">
+                            <div class="selecter-item__title">2. Укажите размер дома, м2</div>
+                            <input class="selecter-item__input selecter-item__input--text" placeholder="6" name="width-home">
+                            <span class="selecter-item__middle">
+                                <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.9875 9C0.902167 9 0.822167 8.968 0.7475 8.904C0.6835 8.84 0.6515 8.76 0.6515 8.664C0.6515 8.632 0.656833 8.59467 0.6675 8.552C0.688833 8.49867 0.720833 8.44 0.7635 8.376L3.5475 4.744L0.9395 1.304C0.896833 1.24 0.864833 1.18667 0.8435 1.144C0.832833 1.10133 0.8275 1.05867 0.8275 1.016C0.8275 0.92 0.8595 0.84 0.9235 0.776C0.9875 0.712 1.0675 0.679999 1.1635 0.679999H1.9795C2.09683 0.679999 2.18217 0.712 2.2355 0.776C2.2995 0.829333 2.35283 0.882667 2.3955 0.936L4.5235 3.704L6.6515 0.952C6.69417 0.898666 6.74217 0.84 6.7955 0.776C6.8595 0.712 6.95017 0.679999 7.0675 0.679999H7.8515C7.9475 0.679999 8.0275 0.712 8.0915 0.776C8.1555 0.84 8.1875 0.92 8.1875 1.016C8.1875 1.05867 8.17683 1.10133 8.1555 1.144C8.14483 1.18667 8.11817 1.24 8.0755 1.304L5.4355 4.776L8.2195 8.376C8.26217 8.44 8.28883 8.49333 8.2995 8.536C8.32083 8.57867 8.3315 8.62133 8.3315 8.664C8.3315 8.76 8.2995 8.84 8.2355 8.904C8.1715 8.968 8.0915 9 7.9955 9H7.1475C7.04083 9 6.9555 8.97333 6.8915 8.92C6.8275 8.86667 6.77417 8.81333 6.7315 8.76L4.4755 5.832L2.2195 8.76C2.17683 8.80267 2.1235 8.856 2.0595 8.92C2.00617 8.97333 1.92083 9 1.8035 9H0.9875Z" fill="#868686"/>
+                                </svg>
+                            </span>
+                            <input class="selecter-item__input selecter-item__input--text" placeholder="6" class="height-home">
+                        </div>
+                        <div data-step="3" class="selecter__item selecter-item">
+                            <div class="selecter-item__title">3. Количество этажей</div>
+                            <div class="selecter-item__block">
+                                <input type="radio" id="level1" name="level" class="selecter-item__input selecter-item__input--radio">
+                                <label for="level1" class="selecter-item__label">1 этаж</label>
+                            </div>
+                            <div class="selecter-item__block">
+                                <input type="radio" id="level2" name="level" class="selecter-item__input selecter-item__input--radio">
+                                <label for="level2" class="selecter-item__label">1,5 этажа</label>
+                            </div>
+                            <div class="selecter-item__block">
+                                <input type="radio" id="level3" name="level" class="selecter-item__input selecter-item__input--radio">
+                                <label for="level3" class="selecter-item__label">3 этажа</label>
+                            </div>
+                        </div>
+                        <div data-step="4" class="selecter__item selecter-item">
+                            <div class="comlections">
+                                <div class="comlections__wrapper">
+                                    <div class="comlections__wrapper--left">
+                                        <div class="comlections__table">
+                                            <div class="comlections__tr">
+                                                <div class="comlections__td">Фундамент</div>
+                                                <div class="comlections__td">бетонные блоки 400х400х400 мм</div>
+                                            </div>
+                                            <div class="comlections__tr">
+                                                <div class="comlections__td">Стены наружные, стены несущие, перегородки</div>
+                                                <div class="comlections__td">панели стен собираются из доски 40x100 мм, 40х150 мм, 40х100 мм соответственно</div>
+                                            </div>
+                                            <div class="comlections__tr">
+                                                <div class="comlections__td">Стропильная система</div>
+                                                <div class="comlections__td">из доски 40х150</div>
+                                            </div>
+                                            <div class="comlections__tr">
+                                                <div class="comlections__td">Высота потолков</div>
+                                                <div class="comlections__td">2,3 м</div>
+                                            </div>
+                                            <div class="comlections__tr">
+                                                <div class="comlections__td">Кровля</div>
+                                                <div class="comlections__td">профнастил</div>
+                                            </div>
+                                            <div class="comlections__tr">
+                                                <div class="comlections__td">Фасад, наличники окон и дверей</div>
+                                                <div class="comlections__td">вагонка хвойных пород, строганная доска 20х90 мм</div>
+                                            </div>
+                                            <div class="comlections__tr">
+                                                <div class="comlections__td">Внутренняя обшивка</div>
+                                                <div class="comlections__td">вагонка хвойных пород, строганная доска 20х90 мм</div>
+                                            </div>
+                                            <div class="comlections__tr">
+                                                <div class="comlections__td">Полы</div>
+                                                <div class="comlections__td">фанера, 12 мм</div>
+                                            </div>
+                                            <div class="comlections__tr">
+                                                <div class="comlections__td">Дверь входная</div>
+                                                <div class="comlections__td">железная</div>
+                                            </div>
+                                            <div class="comlections__tr">
+                                                <div class="comlections__td">Окна</div>
+                                                <div class="comlections__td">ПВХ, профиль Grunder-60</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="complections__price">667360.40 руб.</div>
+                                <div class="complections__subtext">Расчёт является приблизительным</div>
+                                <div class="btn-main complections__btnfinal PopupBtn">Получить смету</div>
+                            </div>
+                        </div>
+                        <div class="selecter__paginations">
+                            <span class="now-number">1</span>
+                            <span>/</span>
+                            <span>4</span>
+                        </div>
+                        <div class="btn-main selecter__btn" data-numberstep="1">Продолжить</div>
+                    </div>
+                </div>
+                <div class="price-wrapper__image">
+                    <img src="img/calculate-image.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Расчитаем стоимость вашего будующего дома -->
     <section class="tabs-form m150">
         <div class="form-tabs">
@@ -872,7 +1004,67 @@
         </span>
         </div>
     </section>
-    <!-- построим дом всего за 60 дней -->
+
+    <section class="m150 build60">
+        <div class="container">
+            <div>
+                <div class="h1-block"><span class="build60__hr services-grid-item__hr"></span>Построим дом всего за 60 дней</div>
+            </div>
+            <div class="build60__wrapper">
+                <div class="build60__list">
+                    <div class="build60__item build60-item active">
+                        <div class="build60-item__number"><span>01</span></div>
+                        <div class="build60-item__content">
+                            <div class="build60-item__title">Возведение фундамента</div>
+                            <div class="build60-item__time">1-3 дня</div>
+                            <div class="build60-item__text">При строительства каркасного дома, мы используем следующие типы фундаментов:
+                                свайно-винтовой, свайно-ростверковый, утепленная Шведская плита (УШП), железобетонные сваи (ЖБ).</div>
+                        </div>
+                    </div>
+                    <div class="build60__item build60-item">
+                        <div class="build60-item__number"><span>02</span></div>
+                        <div class="build60-item__content">
+                            <div class="build60-item__title">Утепление стен</div>
+                            <div class="build60-item__time">7-10 дней</div>
+                            <div class="build60-item__text">Минимальное утепление стен - 150 мм. Этого вполне достаточно даже для северо-западных регионов. Кроме того, мы используем ветрозащитные плиты, чтобы обеспечить комфорт при любой погоде.</div>
+                        </div>
+                    </div>
+                    <div class="build60__item build60-item">
+                        <div class="build60-item__number"><span>03</span></div>
+                        <div class="build60-item__content">
+                            <div class="build60-item__title">Строительство каркаса</div>
+                            <div class="build60-item__time">5-7 дней</div>
+                            <div class="build60-item__text">Качество каркасного дома во многом зависит от используемых пиломатериалов. Для строительства загородных домов используются пиломатериалы двух видов:
+                                доска естественной влажности и камерной сушки.</div>
+                        </div>
+                    </div>
+                    <div class="build60__item build60-item">
+                        <div class="build60-item__number"><span>04</span></div>
+                        <div class="build60-item__content">
+                            <div class="build60-item__title">Внешняя отделка</div>
+                            <div class="build60-item__time">3-5 дней</div>
+                            <div class="build60-item__text">Каркасные дома позволяют использовать совершенно различные варианты внешней отделки. Мы используем:
+                                скандинавская доска,
+                                имитация бруса,
+                                различные виды сайдингов,
+                                плитка Hauberk,
+                                Декоративная штукатурка и многие другие материалы.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="build60__images">
+                    <img src="img/typical.jpg" class="build60__img active">
+                    <img src="img/typical.jpg" class="build60__img">
+                    <img src="img/typical.jpg" class="build60__img">
+                    <img src="img/typical.jpg" class="build60__img">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
     <section class="services m150">
         <div class="container">
             <div class="services__grid services-grid">
@@ -1208,6 +1400,42 @@
 
         });
     });
+</script>
+<script>
+    $(document).ready(function() {
+        let btn = $('.selecter__btn');
+        let btnStepNumberNow;
+
+        btn.on('click', function(){
+            btnStepNumberNow = btn.attr('data-numberstep');
+
+            if(parseInt(btnStepNumberNow) < 4){
+                let selecterItem = $('.selecter-item.active');
+                selecterItem.removeClass('active');
+                selecterItem.next().addClass('active');
+                let nowNumber = selecterItem.next().data('step');
+                btn.attr('data-numberstep', nowNumber);
+                $('.now-number').text(nowNumber);
+                if(parseInt(btnStepNumberNow) == 3){
+                    btn.hide();
+                    $('.selecter__paginations').hide();
+                }
+            } else{
+                console.log('errorStepsCalculate');
+            }
+        });
+    });
+
+
+    $(document).ready(function() {
+        $('.build60-item').on('click', function(){
+            $('.build60-item').removeClass('active');
+            $(this).addClass('active');
+            $(".build60__img").removeClass('active');
+            $(".build60__img").eq($(this).index()).addClass("active");
+        });
+    });
+
 </script>
 
 </body>

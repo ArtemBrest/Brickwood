@@ -89,6 +89,9 @@
   margin-top: 5px;
   color: #868686;
 }
+.complections__btnfinal {
+  margin-top: 30px;
+}
 /* ABOUTE PRICE */
 .aboute-price__wrapper {
   display: flex;

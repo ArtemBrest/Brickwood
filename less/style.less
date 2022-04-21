@@ -753,6 +753,24 @@ button:hover {
     text-transform: uppercase;
     color: #F9F9F9;
   }
+  .banner-content{
+    &__icons{
+      display:flex;
+      margin-top:35px;
+      gap: 20px;
+      img{
+        display:block;
+        margin-bottom:10px;
+      }
+    }
+    &__item{
+      max-width: 150px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #F9F9F9;
+    }
+  }
   .banner-content__text--middle{
     font-weight: 400;
     font-size: 18px;
@@ -1676,6 +1694,108 @@ button:hover {
     }
   }
 }
+
+/* BUILD 60 */
+.build60{
+  &__hr{
+    margin-top:0px;
+  }
+  &__img{
+    display:none;
+    &.active{
+      display: block
+    }
+  }
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap:50px;
+    margin-top: 30px;
+  }
+  &__images{
+    max-width: 615px;
+    width: 100%;
+  }
+  &__item{
+    padding: 15px;
+    cursor: pointer;
+    &:hover,
+    &.active{
+      background: #F9F9F9;
+      .build60-item__time{
+        color:#FBB829;
+      }
+      .build60-item{
+        &__number {
+          span{
+            background: #FBB829;
+            border: 1px solid #FBB829;
+            &:after{
+              background: #FBB829;
+            }
+          }
+        }
+      }
+    }
+  }
+  .build60-item{
+    &__number{
+      display: flex;
+      align-content: center;
+
+      span{
+        position: relative;
+        padding-top: 9px;
+        display: block;
+        text-align: center;
+        background: none;
+        border: 1px solid #303030;
+        box-sizing: border-box;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-weight: 400;
+        font-size: 18px;
+        color: #303030;
+        &:after{
+          content:"";
+          width: 280px;
+          height:1px;
+          background: #303030;
+          top: 19px;
+          left: 39px;
+          position: absolute;
+        }
+      }
+    }
+    &__content{
+      padding-left: 47px;
+      margin-top: -17px;
+    }
+    &__title{
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: #303030;
+    }
+    &__time{
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 120%;
+      color: #868686;
+      margin:3px 0px 6px;
+    }
+    &__text{
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 120%;
+      color: #303030;
+    }
+  }
+}
+
+
+
 /* SECTION LOOK */
 .look{
   background: #F9F9F9;
@@ -2954,6 +3074,7 @@ button:hover {
     }
   }
 }
+
 /* SECTION TEAM */
 .team{
   &__row{
@@ -4232,6 +4353,11 @@ button:hover {
         border-top: 1px solid #D7D7D7;
         padding-top: 8px;
       }
+    }
+  }
+  .build60{
+    .build60__images{
+      display:none;
     }
   }
 }
@@ -6172,6 +6298,17 @@ button:hover {
   .banner{
     .banner-content__title{
       max-width: 300px;
+    }
+  }
+
+  .banner-content {
+    &__icons {
+      flex-direction: column;
+      margin-top: 35px;
+      gap: 20px;
+    }
+    &__item{
+      max-width: 100%;
     }
   }
 }
