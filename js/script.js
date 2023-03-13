@@ -587,4 +587,78 @@ window.addEventListener("load", function () {
             delay: 300,
             duration: 1000,
         }).init();
+
+
+    let vacancyWrapper = document.querySelector(".vacancy");
+    if(vacancyWrapper !== null){
+        let cards = vacancyWrapper.querySelectorAll(".card");
+        cards.forEach(function (card) {
+            let btn = card.querySelector(".card__btn-more")
+            let toggleText = card.querySelector(".cms-description-text")
+            let toggleTextChild;
+            if (toggleText !== null) {
+                toggleTextChild = card.querySelector(".cms-description-text").querySelectorAll("*");
+            }
+            let heightContent = 0;
+            for (let i = 0; i < toggleTextChild.length; i++) {
+                console.log(toggleTextChild.length / 2)
+                if(i < Math.floor(toggleTextChild.length / 2)){
+                    heightContent += toggleTextChild[i].offsetHeight;
+                }
+                else{
+                    break;
+                }
+            }
+            if(window.innerWidth < 768){
+                heightContent = (Math.floor(heightContent/100)*100);
+            }
+            else{
+                heightContent = (Math.floor(heightContent/100)*100) - 10;
+            }
+            toggleText.style.maxHeight = heightContent + "px";
+            btn.addEventListener('click', function (e) {
+                if(card.classList.contains('card--opened')){
+                    btn.querySelector("span").innerHTML = "Показать все";
+                    card.classList.remove('card--opened');
+                }
+                else{
+                    btn.querySelector("span").innerHTML = "Свернуть";
+                    card.classList.add('card--opened');
+                }
+            })
+        })
+    }
+
+
+    const selectSingle = document.querySelector('.input-select');
+    if(selectSingle !== null){
+        const selectSingle_title = selectSingle.querySelector('.input-select__title');
+        const selectSingle_labels = selectSingle.querySelectorAll('.input-select__label');
+        if(selectSingle_title !== null && selectSingle_labels !== null){
+            selectSingle_title.addEventListener('click', () => {
+                if ('active' === selectSingle.getAttribute('data-state')) {
+                    selectSingle.setAttribute('data-state', '');
+                } else {
+                    selectSingle.setAttribute('data-state', 'active');
+                }
+            });
+            for (let i = 0; i < selectSingle_labels.length; i++) {
+                selectSingle_labels[i].addEventListener('click', (evt) => {
+                    console.log(evt.target.textContent)
+                    selectSingle_title.querySelector("span").innerHTML = selectSingle_labels[i].textContent; //
+                    selectSingle.setAttribute('data-state', '');
+                });
+            }
+        }
+    }
+    let accountInfoItemDate = document.getElementById("zoom-form__date")
+    if (accountInfoItemDate !== null) {
+        const datepicker = new Datepicker(accountInfoItemDate, {
+            weekStart: 1,
+            language: 'ru',
+            format: 'dd.mm.yyyy',
+            type: 'input',
+        });
+        datepicker.input
+    }
 })

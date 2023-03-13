@@ -460,7 +460,7 @@ button:hover {
 .header{
   position: relative;
   z-index: 99;
-  background: #F9F9F9;
+  background: @text-color-white;
   &__row{
     padding: 10px 0;
     position: relative;
@@ -511,7 +511,7 @@ button:hover {
     order: 3;
     width: 300px;
     background: #FFFFFF;
-    border: 1px solid #F9F9F9;
+    border: 1px solid @text-color-white;
     box-shadow: inset 0px 1px 4px rgba(206, 206, 206, 0.25);
     padding: 15px;
     display: none;
@@ -621,7 +621,7 @@ button:hover {
     }
     &--left{
       position: relative;
-      background: #303030;
+      background: @text-color-black;
       height: 100%;
       span{
         display: block;
@@ -722,7 +722,7 @@ button:hover {
       font-size: 26px;
       line-height: 30px;
       text-align: center;
-      color: #303030;
+      color: @text-color-black;
       svg{
         margin-left:20px;
         cursor: pointer;
@@ -734,7 +734,7 @@ button:hover {
     .ui-slider-handle{
       width: 22px;
       height: 22px;
-      background: #303030 !important;
+      background: @text-color-black !important;
       top: -10px !important;
       border-radius: 50%;
       border: none;
@@ -751,7 +751,7 @@ button:hover {
     font-size: 42px;
     line-height: 120%;
     text-transform: uppercase;
-    color: #F9F9F9;
+    color: @text-color-white;
   }
   .banner-content{
     &__icons{
@@ -768,14 +768,14 @@ button:hover {
       font-weight: 400;
       font-size: 16px;
       line-height: 19px;
-      color: #F9F9F9;
+      color: @text-color-white;
     }
   }
   .banner-content__text--middle{
     font-weight: 400;
     font-size: 18px;
     line-height: 140%;
-    color: #F9F9F9;
+    color: @text-color-white;
     max-width: 470px;
     width: 100%;
   }
@@ -854,7 +854,7 @@ button:hover {
         display: block;
         width: 200px;
         height: 180px;
-        background: #FBB829;
+        background: @main-color;
         z-index: 1;
       }
     }
@@ -928,6 +928,9 @@ button:hover {
       transform: rotate(180deg);
     }
   }
+  &__more-btn{
+    margin: 50px auto 0 ;
+  }
   &__card{
     display: flex;
     flex-flow: column;
@@ -948,7 +951,7 @@ button:hover {
       &__row{
         display: grid;
         grid-template-columns: repeat(3,1fr);
-        background: #F9F9F9;
+        background: @text-color-white;
         border-top: 1px solid #D7D7D7;
         border-bottom: 1px solid #D7D7D7;
       }
@@ -1173,7 +1176,7 @@ button:hover {
     }
   }
   &__top{
-    background: #F9F9F9;
+    background: @text-color-white;
     padding: 40px 45px;
     &_excursion{
       .aboute-top__image{
@@ -1227,13 +1230,13 @@ button:hover {
         font-weight: 500;
         font-size: 32px;
         line-height: 38px;
-        color: #FBB829;
+        color: @main-color;
       }
       &__text{
         font-weight: 400;
         font-size: 16px;
         line-height: 19px;
-        color: #303030;
+        color: @text-color-black;
         text-align: center;
         margin: 0 auto;
         max-width: 150px;
@@ -1378,7 +1381,7 @@ button:hover {
       border-radius: 50%;
       flex-shrink: 0;
       margin: 0 20px 0 0;
-      background: #F9F9F9;
+      background: @text-color-white;
       & img{
         display: block;
         height: auto;
@@ -1656,7 +1659,7 @@ button:hover {
   }
   &-gray-block{
     padding: 35px;
-    background: #F9F9F9;
+    background: @text-color-white;
     margin-top: 30px;
     min-height: 290px;
     &__title{
@@ -1684,7 +1687,7 @@ button:hover {
         &:before{
           content:"";
           position: absolute;
-          background: #FBB829;
+          background: @main-color;
           width: 12px;
           height: 1px;
           left: 0px;
@@ -1721,17 +1724,17 @@ button:hover {
     cursor: pointer;
     &:hover,
     &.active{
-      background: #F9F9F9;
+      background: @text-color-white;
       .build60-item__time{
-        color:#FBB829;
+        color:@main-color;
       }
       .build60-item{
         &__number {
           span{
-            background: #FBB829;
-            border: 1px solid #FBB829;
+            background: @main-color;
+            border: 1px solid @main-color;
             &:after{
-              background: #FBB829;
+              background: @main-color;
             }
           }
         }
@@ -1749,19 +1752,19 @@ button:hover {
         display: block;
         text-align: center;
         background: none;
-        border: 1px solid #303030;
+        border: 1px solid @text-color-black;
         box-sizing: border-box;
         width: 40px;
         height: 40px;
         border-radius: 50%;
         font-weight: 400;
         font-size: 18px;
-        color: #303030;
+        color: @text-color-black;
         &:after{
           content:"";
           width: 280px;
           height:1px;
-          background: #303030;
+          background: @text-color-black;
           top: 19px;
           left: 39px;
           position: absolute;
@@ -1776,7 +1779,7 @@ button:hover {
       font-weight: 500;
       font-size: 20px;
       line-height: 24px;
-      color: #303030;
+      color: @text-color-black;
     }
     &__time{
       font-weight: 400;
@@ -1789,7 +1792,7 @@ button:hover {
       font-weight: 400;
       font-size: 18px;
       line-height: 120%;
-      color: #303030;
+      color: @text-color-black;
     }
   }
 }
@@ -1798,7 +1801,7 @@ button:hover {
 
 /* SECTION LOOK */
 .look{
-  background: #F9F9F9;
+  background: @text-color-white;
   position: relative;
   padding: 25px 0 40px;
   &:after{
@@ -1881,7 +1884,7 @@ button:hover {
   &__form{
     width: 410px;
     padding: 50px 0px;
-    background: #F9F9F9;
+    background: @text-color-white;
     border: 1px solid #F0F0F0;
     height: max-content;
     position: relative;
@@ -1969,7 +1972,7 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     &__item{
-      background: #F9F9F9;
+      background: @text-color-white;
       border: 1px solid #D7D7D7;
       border-right: none;
       box-sizing: border-box;
@@ -2005,7 +2008,7 @@ button:hover {
       cursor: pointer;
       &--active,
       &:hover{
-        border-bottom:1px solid #FBB829;
+        border-bottom:1px solid @main-color;
         color: @text-color-black;
       }
     }
@@ -2078,7 +2081,7 @@ button:hover {
     &--active{
       svg{
         transform: rotate(45deg);
-        color: #FBB829;
+        color: @main-color;
       }
     }
   }
@@ -2094,7 +2097,7 @@ button:hover {
       &:before{
         content:"";
         position: absolute;
-        background: #FBB829;
+        background: @main-color;
         width: 12px;
         height: 1px;
         left: 0px;
@@ -2243,7 +2246,7 @@ button:hover {
 }
 /* SECTION FOOTER */
 .footer{
-  background: #F9F9F9;
+  background: @text-color-white;
   padding-top: 27px;
   .logo--mobile{
     display:none!important;
@@ -2315,7 +2318,7 @@ button:hover {
   &__item{
     width: 35px;
     height: 35px;
-    background: #FBB829;
+    background: @main-color;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -2367,7 +2370,7 @@ button:hover {
     color: #868686;
     &--active,
     &:hover{
-      color: #303030;
+      color: @text-color-black;
     }
   }
   &__hidden{
@@ -2388,7 +2391,7 @@ button:hover {
     font-weight: 400;
     font-size: 18px;
     line-height: 140%;
-    color: #303030;
+    color: @text-color-black;
     min-width: 210px;
     padding: 10px 30px;
     display: flex;
@@ -2405,14 +2408,14 @@ button:hover {
     &_active,
     &:hover{
       background: @text-color-black;
-      color: #F9F9F9;
+      color: @text-color-white;
     }
   }
   &__cap{
     text-align: center;font-weight: 400;
     font-size: 22px;
     line-height: 26px;
-    color: #303030;
+    color: @text-color-black;
     margin-top: 20px;
   }
   &__wrapper{
@@ -2443,12 +2446,12 @@ button:hover {
     }
     &__link{
       display:block;
-      background: #FBB829;
+      background: @main-color;
       border-radius: 3px;
       padding: 5px 12px;
       font-weight: 400;
       font-size: 18px;
-      color: #303030;
+      color: @text-color-black;
     }
   }
   .product-page-wrapper{
@@ -2479,7 +2482,7 @@ button:hover {
     font-weight: 400;
     font-size: 22px;
     line-height: 26px;
-    color: #303030;
+    color: @text-color-black;
     margin-bottom: 20px;
     &:not(:first-child){
       margin-top: 25px;
@@ -2515,8 +2518,8 @@ button:hover {
       left: -99999px;
       opacity: 0;
       &:checked + label{
-        background: #303030;
-        border:1px solid #303030;
+        background: @text-color-black;
+        border:1px solid @text-color-black;
         color: #fff;
       }
     }
@@ -2532,13 +2535,13 @@ button:hover {
       font-size: 16px;
       line-height: 19px;
       text-align: center;
-      color: #303030;
+      color: @text-color-black;
       cursor:pointer;
       &--active,
       &:hover
       {
-        background: #303030;
-        border:1px solid #303030;
+        background: @text-color-black;
+        border:1px solid @text-color-black;
         color: #fff;
       }
     }
@@ -2553,8 +2556,8 @@ button:hover {
       opacity: 0;
       &:checked + label{
         &:after{
-          background: #303030;
-          border: 1px solid #303030;
+          background: @text-color-black;
+          border: 1px solid @text-color-black;
         }
         &:before{
           content:"";
@@ -2593,8 +2596,8 @@ button:hover {
       &:hover
       {
         &:after{
-          background: #303030;
-          border: 1px solid #303030;
+          background: @text-color-black;
+          border: 1px solid @text-color-black;
         }
         &:before{
           content:"";
@@ -2661,7 +2664,7 @@ button:hover {
   }
 }
 .banner-slidebar{
-  background: #F9F9F9;
+  background: @text-color-white;
   margin-top: 50px;
   text-align: center;
   padding:40px 10px;
@@ -2670,7 +2673,7 @@ button:hover {
     font-size: 20px;
     line-height: 24px;
     text-align: center;
-    color: #303030;
+    color: @text-color-black;
   }
   &__arrow{
     display: flex;
@@ -2723,7 +2726,7 @@ button:hover {
       position: absolute;
       top: 275px;
       left: -15px;
-      background: #F9F9F9;
+      background: @text-color-white;
       margin-top: 0;
       z-index: 10;
       cursor: pointer;
@@ -2755,7 +2758,7 @@ button:hover {
   &__row{
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    background: #F9F9F9;
+    background: @text-color-white;
     border: 1px solid #D7D7D7;
     margin: -1px 0 15px;
   }
@@ -2873,7 +2876,7 @@ button:hover {
   &__aside{
     flex-flow: column;
     position: relative;
-    background: #F9F9F9;
+    background: @text-color-white;
     border: 1px solid #F0F0F0;
     padding: 35px 40px;
     height: max-content;
@@ -2883,8 +2886,8 @@ button:hover {
       right: 0;
       bottom: 0;
       border: 20px solid transparent;
-      border-right: 20px solid #fbb829;
-      border-bottom: 20px solid #fbb829;
+      border-right: 20px solid @main-color;
+      border-bottom: 20px solid @main-color;
     }
   }
   &__title{
@@ -3023,7 +3026,7 @@ button:hover {
     grid-gap: 30px;
     &_technology{
       .card{
-        background: #F9F9F9;
+        background: @text-color-white;
         padding: 20px 20px 60px;
         position: relative;
         &:after {
@@ -3032,8 +3035,8 @@ button:hover {
           right: 0;
           bottom: 0;
           border: 20px solid transparent;
-          border-right: 20px solid #fbb829;
-          border-bottom: 20px solid #fbb829;
+          border-right: 20px solid @main-color;
+          border-bottom: 20px solid @main-color;
         }
       }
     }
@@ -3147,7 +3150,7 @@ button:hover {
         font-weight: 400;
         font-size: 22px;
         line-height: 26px;
-        color: #303030;
+        color: @text-color-black;
         padding: 0 0 10px;
         border-bottom: 2px solid @main-color;
         margin: 0 0 10px;
@@ -3299,7 +3302,7 @@ button:hover {
   &__wrapper{
     padding: 40px 0;
     margin: 0 0 30px;
-    background: #F9F9F9;
+    background: @text-color-white;
   }
   &__title{
     max-width: 460px;
@@ -3485,7 +3488,7 @@ button:hover {
     }
     &__item{
       display: block;
-      background: #F9F9F9;
+      background: @text-color-white;
       border: 1px solid #868686;
       padding: 25px;
       transition: all 0.2s;
@@ -3498,14 +3501,14 @@ button:hover {
       font-weight: 500;
       font-size: 18px;
       line-height: 22px;
-      color: #303030;
+      color: @text-color-black;
       margin-top: 10px;
     }
     &-price{
       font-weight: 400;
       font-size: 16px;
       line-height: 19px;
-      color: #FBB829;
+      color: @main-color;
       margin-top: 10px;
     }
   }
@@ -3607,7 +3610,7 @@ button:hover {
   margin: 0 0 200px;
   position: relative;
   padding: 40px 0;
-  background: #F9F9F9;
+  background: @text-color-white;
   .container{
     position: relative;
   }
@@ -3704,7 +3707,7 @@ button:hover {
       position: absolute;
       top: 185px;
       left: -15px;
-      background: #F9F9F9;
+      background: @text-color-white;
       margin-top: 0;
       z-index: 10;
       cursor: pointer;
@@ -3782,15 +3785,15 @@ button:hover {
       &__bottom{
         position: relative;
         padding: 20px 0 20px 20px;
-        background: #F9F9F9;
+        background: @text-color-white;
         &:after {
           content: '';
           position: absolute;
           right: 0;
           bottom: 0;
           border: 20px solid transparent;
-          border-right: 20px solid #fbb829;
-          border-bottom: 20px solid #fbb829;
+          border-right: 20px solid @main-color;
+          border-bottom: 20px solid @main-color;
         }
       }
       &__list{
@@ -4028,7 +4031,7 @@ button:hover {
       font-size: 16px;
       line-height: 19px;
       text-align: right;
-      color: #303030;
+      color: @text-color-black;
     }
   }
 }
@@ -4384,7 +4387,7 @@ button:hover {
     }
     .banner__information{
       position: relative;
-      background: #303030;
+      background: @text-color-black;
       height: 100%;
       padding-top: 30px;
       .container{
@@ -4805,7 +4808,7 @@ button:hover {
       gap: 7px;
       line-height: 26px;
       font-size: 12px;
-      color: #303030;
+      color: @text-color-black;
       svg{
         display: block;
       }
@@ -5026,6 +5029,9 @@ button:hover {
     }
     &__card {
       width: 380px;
+    }
+    &__more-btn{
+      display: none;
     }
   }
   /* SECTION PORTFOLIO */
@@ -5594,7 +5600,7 @@ button:hover {
   }
   /* SECTION LOOK */
   .look{
-    background: #F9F9F9;
+    background: @text-color-white;
     position: relative;
     padding: 30px 0 60px;
     &__info{
@@ -5890,7 +5896,7 @@ button:hover {
     &__btn{
       &-prev,
       &-next{
-        background: #F9F9F9;
+        background: @text-color-white;
       }
     }
   }
@@ -6019,7 +6025,7 @@ button:hover {
     &__wrapper{
       padding: 30px 0;
       margin: 0;
-      background: #F9F9F9;
+      background: @text-color-white;
     }
     &__title{
       margin: 0 0 15px;
@@ -6309,6 +6315,1044 @@ button:hover {
     }
     &__item{
       max-width: 100%;
+    }
+  }
+}
+.checkbox {
+  .custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    & + label {
+      display: flex;
+      align-items: center;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 100%;
+      color: @text-color-black;
+      text-align: left;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 1px solid @text-color-black;
+        margin: 0 10px 0 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50% 50%;
+      }
+    }
+    &:checked + label::before {
+      border-color: #fbb829;
+      background-color: #fbb829;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+    }
+  }
+}
+
+
+/* NEW PAGE*/
+.mortgage-banner{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  &__info{
+    padding: 150px 0;
+    max-width: 850px;
+  }
+  &__title{
+    font-size: 75px;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: @text-color-white;
+    margin-bottom: 40px;
+  }
+  &__cards{
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(7.5px);
+    margin-bottom: 80px;
+    padding: 15px;
+    .card{
+      display: flex;
+      align-items: center;
+      padding: 0 40px 0 0;
+      &:not(:last-child){
+        border-right: 1px solid @text-color-white;
+        margin: 0 40px 0 0;
+      }
+      &__icon{
+        margin-right: 10px;
+      }
+      &__title{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 120%;
+        text-transform: uppercase;
+        color: @text-color-white;
+      }
+    }
+  }
+}
+.advantages-building{
+  &__title{
+    margin: 0 0 30px;
+    max-width: 620px;
+  }
+  &__cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+    .card{
+      padding: 40px 40px 12px;
+      background: @text-color-white;
+      &__title{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 120%;
+        text-transform: uppercase;
+        color: @text-color-black;
+        margin-bottom: 10px;
+      }
+      &__text{
+        font-size: 18px;
+        line-height: 140%;
+        color: @text-color-black;
+      }
+      &__img{
+        display: block;
+        width: 110px;
+        height: 110px;
+        object-fit: cover;
+        margin: 0 0 0 auto;
+      }
+    }
+  }
+}
+.contact-form{
+  max-width: 790px;
+  flex-shrink: 0;
+  &__bg{
+    position: relative;
+    background: @text-color-white;
+  }
+  &__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__title{
+    max-width: 650px;
+    margin: 0 0 60px;
+  }
+  &__group{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+  }
+  &__input{
+    width: 100%;
+    height: 50px;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 0px 17px;
+    line-height: 19px;
+    border: 1px solid #F0F0F0;
+    &::placeholder{
+      color: #868686;
+    }
+    &.valid{
+      border-bottom: 1px solid #00963F;
+    }
+    &.error{
+      border: 1px solid red;
+    }
+  }
+  .checkbox{
+    display: none;
+    margin: 15px 0 20px;
+    .custom-checkbox + label{
+      font-size: 12px;
+      line-height: 100%;
+      color: #000000;
+    }
+  }
+  &__btn{
+    width: 100%;
+  }
+  &__banner{
+    img{
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  &__line{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    img{
+      width: 100%;
+      display: block;
+    }
+  }
+}
+.calculator-module{
+  .container-iframe{
+    overflow: hidden;
+    padding: 0;
+    &::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+      background-color: #d6d6d6;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: @main-color;
+      border-radius: 3px;
+    }
+  }
+  &__title{
+    margin: 0 0 30px;
+  }
+  &__iframe{
+    margin: -2px -16px -10px;
+    width: ~"calc(100% + 32px)";
+  }
+}
+.steps-deals{
+  &__title{
+    margin: 0 0 30px;
+  }
+  &__wrapper{
+    display: flex;
+    width: 100%;
+  }
+  &__cards{
+    max-width: 450px;
+    &:first-child{
+      margin-right: 70px;
+    }
+    .item{
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+      &:not(:last-child){
+        padding-bottom: 25px;
+      }
+      &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 17px;
+        display: block;
+        height: 100%;
+        width: 1px;
+        opacity: 0.5;
+        border-right: 1px dashed #000000;
+      }
+      &__num{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-right: 20px;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background: @main-color;
+        font-size: 18px;
+        line-height: 130%;
+        color: @text-color-black;
+        z-index: 9;
+      }
+      &__info{
+        padding: 5px 0 0;
+        font-size: 18px;
+        line-height: 140%;
+        color: @text-color-black;
+      }
+    }
+  }
+  &__banner{
+    margin: 0 0 0 auto;
+  }
+}
+.partner-banks{
+  &__title{
+    margin: 0 0 30px;
+  }
+  &__wrapper{
+    display: flex;
+    align-self: stretch;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 3px;
+    width: 100%;
+    &::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+      background-color: #d6d6d6;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: @main-color;
+      border-radius: 3px;
+    }
+    .card{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-flow: column;
+      flex: 1 1 auto;
+      min-width: 285px;
+      height: inherit;
+      background: #FFFFFF;
+      border: 1px solid #D7D7D7;
+      &:not(:last-child){
+        margin-right: 20px;
+      }
+      &__img{
+        display: block;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+      &__all{
+        font-weight: 600;
+        font-size: 75px;
+        line-height: 115%;
+        text-transform: uppercase;
+        color: @main-color;
+      }
+      &__text{
+        font-size: 18px;
+        line-height: 140%;
+        color: @text-color-black;
+      }
+    }
+  }
+}
+.vacancy{
+  &__title{
+    margin: 0 0 40px;
+  }
+  &__cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+    max-width: 800px;
+    .card{
+      border-top: 1px solid #868686;
+      padding: 40px 0 0;
+      &.card--opened{
+        .card{
+          &__content{
+            max-height: 100%!important;
+            overflow: visible;
+          }
+          &__btn-more{
+            &-icon{
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
+      &__title{
+        margin-bottom: 25px;
+      }
+      &__content{
+        margin-bottom: 40px;
+        overflow: hidden;
+      }
+      &__sub-title{
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 26px;
+        color: @text-color-black;
+        margin-bottom: 10px;
+      }
+      &__link{
+        margin-bottom: 30px;
+      }
+      &__btn-more{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 120%;
+        color: #000000;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid @text-color-black;
+        width: fit-content;
+        &-icon{
+          transform: rotate(135deg);
+          color: @main-color;
+        }
+        &:hover{
+          border-bottom: 1px solid @main-color;
+        }
+      }
+    }
+  }
+}
+.zoom-banner{
+  padding: 90px 0 175px;
+  min-height: 805px;
+  position: relative;
+  background: @text-color-white;
+  &__wrapper{
+    position: relative;
+  }
+  &__title{
+    font-size: 75px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: @text-color-black;
+    margin-bottom: 20px;
+    max-width: 650px;
+    span{
+      color: @main-color;
+    }
+  }
+  &__text{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    max-width: 420px;
+    margin-bottom: 60px;
+  }
+  &__img{
+    position: absolute;
+    right: 0;
+    bottom: -170px;
+  }
+  &__line{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+  }
+}
+.zoom-advantages{
+  &__title{
+    margin-bottom: 40px;
+  }
+  &__cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 25px;
+    .card{
+      background: @text-color-white;
+      padding: 25px 25px 40px;
+      position: relative;
+      color: @text-color-black;
+      &__img{
+        width: 60px;
+        height: 60px;
+        margin-bottom: 40px;
+      }
+      &__title{
+        margin-bottom: 16px;
+        max-width: 240px;
+      }
+      &__text{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+        max-width: 285px;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border: 20px solid transparent;
+        border-right: 20px solid #fbb829;
+        border-bottom: 20px solid #fbb829;
+      }
+    }
+  }
+}
+.zoom-form{
+  max-width: 520px;
+  position: relative;
+  &__bg{
+    padding: 65px 0;
+    position: relative;
+    background: @text-color-white;
+  }
+  &__title{
+    margin: 0 0 40px;
+  }
+  &__group{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px;
+    position: relative;
+    z-index: 2;
+  }
+  &__item{
+    position: relative;
+    &.zoom-form__item--date{
+      cursor: pointer;
+      svg{
+        position: absolute;
+        top: 12px;
+        right: 20px;
+        color: @main-color;
+      }
+    }
+    .datepicker {
+      color: @text-color-black;
+      &.active {
+        left: 0 !important;
+        top: 60px !important;
+      }
+      &-picker {
+        padding: 20px 12px;
+        border-radius: 8px;
+        background: #FFFFFF;
+      }
+      &-view{
+        & .dow {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 130%;
+          text-align: center;
+          padding: 8px 0;
+          height: 36px;
+        }
+        &.datepicker-grid{
+          & .datepicker-cell {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 63px;
+            line-height: 100%;
+            border-radius: 50%;
+          }
+          & .datepicker-cell.focused:not(.selected) {
+            background: transparent;
+          }
+        }
+      }
+      &-cell{
+        &.selected,
+        &.selected:hover{
+          font-weight: 400;
+          color: @text-color-white;
+          background: @main-color;
+          border-radius: 50%;
+        }
+        &.day {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 130%;
+          height: 36px;
+          width: 36px;
+          text-align: center;
+          border-radius: 50%;
+          cursor: pointer;
+          &:hover {
+            background: @text-color-white;
+          }
+          &.prev,
+          &.next{
+            color: @text-color-black;
+            opacity: .5;
+          }
+          &.selected.focused {
+            font-weight: 400;
+            color: @text-color-white;
+            background: @main-color;
+            border-radius: 50%;
+          }
+          &.focused:not(.selected) {
+            background: transparent;
+          }
+        }
+      }
+    }
+    .input-select {
+      position: relative;
+      width: 100%;
+      height: 50px;
+      z-index: 1;
+      &[data-state=active]{
+        .input-select{
+          &__title {
+            svg {
+              transform: rotate(180deg);
+            }
+          }
+          &__content {
+            display: flex;
+          }
+        }
+      }
+      &__title {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 17px;
+        height: 100%;
+        background: #FFFFFF;
+        border: 1px solid #F0F0F0;
+        cursor: pointer;
+        & span {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 19px;
+          color: #868686;
+        }
+        & svg {
+          margin-top: 6px;
+          transition: all 0.3s;
+        }
+      }
+      &__content {
+        position: absolute;
+        top: 55px;
+        left: 0;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #FFFFFF;
+        border: 1px solid #F0F0F0;
+        transition: all 0.3s;
+        z-index: 1;
+        padding: 18px;
+        overflow-y: auto;
+        max-height: 160px;
+        &::-webkit-scrollbar {
+          width: 4px;
+          height: 4px;
+          background-color: #d6d6d6;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: @main-color;
+          border-radius: 3px;
+        }
+      }
+      &__row{
+        &:not(:last-child){
+          margin-bottom: 10px;
+        }
+      }
+      &__input {
+        position: absolute;
+        display: none;
+        z-index: -1;
+        opacity: 0;
+        pointer-events: none;
+        &:checked + label{
+          color: @main-color;
+        }
+      }
+      &__label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #868686;
+        width: 100%;
+        min-height: 25px;
+        transition: all 0.3s;
+        cursor: pointer;
+        &:hover{
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+  &__input{
+    width: 100%;
+    height: 50px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 0 17px;
+    border: 1px solid #F0F0F0;
+    &::placeholder{
+      color: #868686;
+    }
+    &.valid{
+      border: 1px solid #00963F;
+    }
+    &.error{
+      border: 1px solid red;
+    }
+  }
+  .checkbox{
+    max-width: 280px;
+    margin: 25px 0 20px;
+    .custom-checkbox + label{
+      font-size: 12px;
+      line-height: 100%;
+      color: #000000;
+    }
+  }
+  &__banner{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media (max-width: 1235px) {
+  .contact-form{
+    max-width: 640px;
+    flex-shrink: 0;
+  }
+  .advantages-building{
+    &__cards{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-gap: 20px;
+    }
+  }
+  .steps-deals{
+    &__wrapper{
+      flex-flow: row wrap;
+    }
+    &__banner{
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .zoom-banner{
+    &__img{
+      position: absolute;
+      right: 0;
+      bottom: -95px;
+      width: 70%;
+    }
+  }
+  .zoom-form{
+    &__banner{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      width: 60%;
+    }
+  }
+}
+@media (max-width: 991px) {
+  .mortgage-banner{
+    &__info{
+      padding: 100px 0;
+      max-width: 850px;
+    }
+    &__title{
+      font-size: 30px;
+      line-height: 110%;
+      color: @text-color-white;
+      margin-bottom: 40px;
+    }
+    &__cards{
+      .card{
+        display: flex;
+        align-items: center;
+        padding: 0 20px 0 0;
+        &:not(:last-child){
+          margin: 0 20px 0 0;
+        }
+      }
+    }
+  }
+  .contact-form{
+    max-width: 790px;
+    flex-shrink: 0;
+    &__wrapper{
+      display: block;
+    }
+    &__title{
+      max-width: 650px;
+      margin: 0 0 30px;
+    }
+    &__group{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 15px;
+    }
+    .checkbox{
+      display: block;
+    }
+    &__btn{
+      width: 100%;
+    }
+    &__banner{
+      img{
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+      }
+    }
+    &__line{
+      display: none;
+    }
+  }
+  .steps-deals {
+    &__wrapper {
+      display: block;
+    }
+    &__cards{
+      max-width: 100%;
+      position: relative;
+      &:first-child{
+        margin: 0;
+        padding-bottom: 25px;
+        &:before{
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 17px;
+          display: block;
+          height: 25px;
+          width: 1px;
+          opacity: 0.5;
+          border-right: 1px dashed #000000;
+        }
+      }
+    }
+  }
+  .zoom-banner{
+    padding: 90px 0;
+    min-height: 100%;
+    &__title{
+      font-size: 30px;
+      line-height: 110%;
+    }
+    &__text{
+      margin-bottom: 40px;
+    }
+    &__img{
+      position: static;
+      right: unset;
+      bottom: unset;
+      width: auto;
+      height: auto;
+      max-width: 100%;
+    }
+    &__line{
+      display: none;
+    }
+  }
+  .zoom-advantages{
+    &__cards{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-gap: 25px;
+    }
+  }
+  .zoom-form{
+    &__banner{
+      display: none;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .mortgage-banner{
+    &__info{
+      padding: 75px 0;
+      max-width: 850px;
+    }
+    &__title{
+      font-size: 30px;
+      line-height: 110%;
+      margin-bottom: 30px;
+    }
+    &__cards{
+      display: flex;
+      flex-flow: column;
+      align-items: flex-start;
+      margin-bottom: 60px;
+      padding: 15px;
+      .card{
+        display: flex;
+        align-items: center;
+        padding: 0;
+        &:not(:last-child){
+          margin: 0 0 10px;
+          border-right: none;
+        }
+        &__icon{
+          margin-right: 10px;
+        }
+        &__title{
+          font-size: 18px;
+          line-height: 120%;
+        }
+      }
+    }
+    &__btn{
+      width: 100%;
+    }
+  }
+  .advantages-building{
+    &__title{
+      margin: 0 0 25px;
+    }
+    &__cards{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 15px;
+      .card{
+        padding: 20px 20px 12px;
+        background: @text-color-white;
+        &__title{
+          font-size: 18px;
+          line-height: 120%;
+          margin-bottom: 5px;
+        }
+        &__text{
+          font-size: 14px;
+          line-height: 125%;
+        }
+      }
+    }
+  }
+  .calculator-module{
+    &__title{
+      margin: 0 0 25px;
+    }
+    &__iframe{
+      margin: 0;
+      width: 100%;
+    }
+  }
+  .steps-deals{
+    &__title{
+      margin: 0 0 25px;
+    }
+  }
+  .partner-banks{
+    &__title{
+      margin: 0 0 25px;
+    }
+    &__wrapper{
+      .card{
+        min-width: 190px;
+        &:not(:last-child){
+          margin-right: 8px;
+        }
+        &__all{
+          font-size: 40px;
+          line-height: 115%;
+        }
+        &__text{
+          font-size: 16px;
+          line-height: 140%;
+        }
+      }
+    }
+  }
+  .vacancy{
+    &__title{
+      margin: 0 0 30px;
+    }
+    &__cards{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+      max-width: 800px;
+      .card{
+        border-top: 1px solid #868686;
+        padding: 20px 0 0;
+        &__title{
+          margin-bottom: 15px;
+        }
+        &__content{
+          margin-bottom: 30px;
+        }
+        &__sub-title{
+          font-size: 18px;
+          line-height: 21px;
+        }
+        &__link{
+          width: 100%;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+  .zoom-banner{
+    padding: 75px 0;
+    &__title{
+      font-size: 30px;
+      line-height: 110%;
+      margin-bottom: 16px;
+    }
+    &__text{
+      font-size: 14px;
+      line-height: 125%;
+      margin-bottom: 20px;
+    }
+    &__btn{
+      width: 100%;
+    }
+  }
+  .zoom-advantages{
+    &__title{
+      margin-bottom: 25px;
+    }
+    &__cards{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+      .card{
+        background: @text-color-white;
+        padding: 15px 15px 30px;
+        position: relative;
+        color: @text-color-black;
+        &__img{
+          margin-bottom: 20px;
+        }
+        &__title{
+          margin-bottom: 16px;
+          max-width: 240px;
+        }
+        &__text{
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .zoom-form{
+    max-width: 100%;
+    &__bg{
+      padding: 40px 0;
+      overflow: visible;
+    }
+    &__title{
+      margin: 0 0 30px;
+    }
+    &__group{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 16px;
+    }
+    &__btn{
+      width: 100%;
     }
   }
 }

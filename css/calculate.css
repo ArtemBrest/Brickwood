@@ -68,7 +68,8 @@
   width: 45px;
   height: 45px;
   border: 1px solid #D7D7D7;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   text-align: center;
   padding: 0px;
 }
@@ -94,6 +95,8 @@
 }
 /* ABOUTE PRICE */
 .aboute-price__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 125px;
 }
@@ -118,6 +121,8 @@
   grid-template-columns: repeat(3, 1fr);
 }
 .aboute-price .aboute-price-grid__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 15px;
   font-weight: 400;
@@ -150,7 +155,10 @@
     border: none;
   }
   .aboute-price__wrapper {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 40px;
   }
   .aboute-price__right {
