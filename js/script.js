@@ -661,4 +661,62 @@ window.addEventListener("load", function () {
         });
         datepicker.input
     }
+
+
+    let gardenPresentFormSelect = document.querySelector('.garden-present-form-item__select');
+    if(gardenPresentFormSelect !== null){
+        let selectSingleHead = gardenPresentFormSelect.querySelector('.select__head');
+        let selectSingleLabels = gardenPresentFormSelect.querySelectorAll('.select-item__label');
+        if(selectSingleHead !== null && selectSingleLabels !== null){
+            selectSingleHead.addEventListener('click', () => {
+                if ('active' === gardenPresentFormSelect.getAttribute('data-state')) {
+                    gardenPresentFormSelect.setAttribute('data-state', '');
+                } else {
+                    gardenPresentFormSelect.setAttribute('data-state', 'active');
+                }
+            });
+            for (let i = 0; i < selectSingleLabels.length; i++) {
+                selectSingleLabels[i].addEventListener('click', (evt) => {
+                    selectSingleHead.querySelector(".select__title").innerHTML = selectSingleLabels[i].textContent;
+                    gardenPresentFormSelect.setAttribute('data-state', '');
+                });
+            }
+        }
+    }
+    let gardenPresentSwiper = document.getElementById("garden-present-swiper");
+    if(gardenPresentSwiper !== null){
+        var swiper = new Swiper(gardenPresentSwiper, {
+            slidesPerView: "auto",
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".garden-present-arrow--next",
+                prevEl: ".garden-present-arrow--prev",
+            },
+            breakpoints: {
+                768: {
+                    spaceBetween: 20,
+                    centeredSlides: true,
+                }
+            },
+        });
+    }
+    let popupGardenBtn = document.querySelectorAll(".popup-garden-btn");
+    let popupGarden = document.querySelector(".pop-up-form__bg");
+    let popupGardenClose = document.querySelector(".pop-up-form__close");
+    if (popupGardenBtn !== null && popupGarden !== null) {
+        for (let el of popupGardenBtn) {
+            el.addEventListener("click", function () {
+                fadeIn(popupGarden);
+                fadeIn(Fade);
+            })
+        }
+        popupGardenClose.addEventListener("click", function () {
+            fadeOut(popupGarden);
+            fadeOut(Fade);
+        })
+        Fade.addEventListener("click", function () {
+            fadeOut(popupGarden);
+            fadeOut(Fade);
+        })
+    }
 })
